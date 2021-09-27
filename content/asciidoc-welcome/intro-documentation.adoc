@@ -10,21 +10,18 @@ aliases:
   - /benutzerhandbuch/enterprise-tenant-de/#tenant-sla-monitoring
 ---
 
+include::content/asciidoc-welcome/include.asciidoc.txt[]
+
 This documentation describes the *10.10.0 release (July 2021)* of the
-\{\{< product-c8y-iot >}} platform. It includes all new features and
+{product-c8y-iot} platform. It includes all new features and
 functionality introduced with release 10.10.0 (see the
-https://%7B%7B%3C%20domain-c8y%20%3E%7D%7D/guides/releasenotes/release-10-10-0/overview-10-10-0/[Release
+https://{domain-c8y}/guides/releasenotes/release-10-10-0/overview-10-10-0/[Release
 notes] for details).
 
 ____
-*Important:* Depending on the \{\{< product-c8y-iot >}} plan your
-organization has purchased, only a subset of the features and
-functionalities described in this documentation might be available to
-you.
+*Important:* Depending on the {product-c8y-iot} plan your organization has purchased, only a subset of the features and functionalities described in this documentation might be available to you.
 
-Please refer to the link:%7B%7B%3C%20link-c8y-pricing%20%3E%7D%7D[\{\{<
-c8y-pricing >}}] for details on the plans available, and refer to your
-contract for details on your particular subscriptions.
+Please refer to the link:{link-c8y-pricing}[{c8y-pricing}] for details on the plans available, and refer to your contract for details on your particular subscriptions.
 ____
 
 To access the documentation index, click the arrow icon in the selection
@@ -33,10 +30,7 @@ field below the logo on the top left:
 image::/images/about/welcome-selection.png[Select guide]
 
 ____
-*Info:* The *Installation and Operations guides* for the \{\{<
-product-c8y-iot >}} platform are not publicly available. They are
-provided on the
-link:%7B%7B%3C%20link-sag-documentation%20%3E%7D%7D[\{\{< company-sag
->}} \{\{< sag-portal >}}], see
-link:/welcome/additional-resources/[Additional resources].
+*Info:* The *Installation and Operations guides* for the {product-c8y-iot} platform are not publicly available. They are provided on the link:{link-sag-documentation}[{company-sag} {sag-portal}], see link:/welcome/additional-resources/[Additional resources].
 ____
+
+NOTE: A sample note.

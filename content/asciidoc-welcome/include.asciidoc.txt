@@ -1,0 +1,7 @@
+:product-c8y-iot: Cumulocity IoT
+:c8y-pricing: Cumulocity IoT Pricing page
+:link-c8y-pricing: https://www.softwareag.cloud/site/pricing/cumulocity-iot.html#/
+:domain-c8y: cumulocity.com
+:company-sag: Software AG
+:sag-portal: Empower Portal
+:link-sag-documentation: https://documentation.softwareag.com/
