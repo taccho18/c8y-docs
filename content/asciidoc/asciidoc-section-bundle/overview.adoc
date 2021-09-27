@@ -23,7 +23,7 @@ ifdef::asciidoctor[]
 endif::asciidoctor[]
 :idprefix:
 :stylesheet: asciidoc.css
-:imagesdir: images
+//:imagesdir: images
 //:backend: docbook45
 //:backend: html5
 //:doctype: book
@@ -139,13 +139,13 @@ after this brief interruption.
 
 == We're back!
 
-Want to see a image:tiger.png[Tiger]?
+Want to see a image:../tiger.png[Tiger]?
 
 Do you feel safer with the tiger in a box?
 
 
 .Tiger in a box
-image::content/asciidoc/asciidoc-section-bundle/tiger.png[]
+image::../tiger.png[]
 
 
 include::content/asciidoc/asciidoc-section-bundle/include.asciidoc.txt[]
@@ -184,6 +184,7 @@ Here's another quote:
 ____
 When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth.
 ____
+
 
 Getting Literal [[literally]]
 -----------------------------
