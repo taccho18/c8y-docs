@@ -1,11 +1,8 @@
 ---
 weight: 60
-title: Managing data
+title: Retention rules
 
 ---
-
-<a name="retention-rules"></a>
-### Retention rules
 
 Retention rules gives you control on how long data is stored in your account. By default, all historical data is deleted after 60 days (configurable in the system settings).
 
@@ -66,31 +63,3 @@ Hover over the rule you want to delete and click the delete icon at the right.
 >The retention process removes the measurements with the type `c8y_Temperature` which are older than 30 days, all other measurements will be removed when they are older than 60 days.
 
 >**Info:** The source parameter is the ID of the device. When it is defined, the retention process only removes the documents directly related to the device represented by the source, not its children or groups it belongs to.
-
-<a name="files"></a>
-### Managing files in the file repository
-
-The file repository provides an overview of the files stored in your account.
-
-Click **Files repository** in the **Management** menu to see a list of files.
-
-The files listed can come from various sources. They can be software images, configuration snapshots taken from devices, log files from devices or web applications uploaded from the **Own applications** page.
-
-For each file, the name of the file, its owner, the file type (i.e. image/bmp, text/csv), its size and the date when it was last updated is provided.
-
-<img src="/images/users-guide/Administration/admin-files-repository.png" alt="Files Repository" style="max-width: 100%">
-
-#### To upload a file from your computer
-
-Click **Upload file** in the top menu bar.
-
-#### To download a file from your account
-
-Click the menu icon at the right of the respective row and then click **Download**.
-
-
-#### To delete a file from your account
-
-Click the menu icon at the right of the respective row and then click **Delete**.
-
->**Info:** If the file corresponds to an active application, it cannot be deleted. You first need to remove or upgrade the application to be able to delete it.

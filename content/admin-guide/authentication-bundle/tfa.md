@@ -1,5 +1,5 @@
 ---
-weight: 61
+weight: 40
 title: Two-factor authentication
 ---
 The Two-factor authentication (TFA) is an extra layer of security that only completes authentication with a combination of two different factors: something the users know (username and password) and something they have (for example, smartphone) or something they are (for example, fingerprint). You can read more on how to configure TFA in the [authentication settings](/users-guide/administration/#authentication) section.

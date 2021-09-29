@@ -1,6 +1,6 @@
 ---
 title: Administration guide
-bundle: administration-guide
+bundle: admin-guide
 icon: "c8y-icon c8y-icon-user"
 type: root
 layout: root

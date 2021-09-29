@@ -1,6 +1,6 @@
 ---
-weight: 80
-title: Platform configuration settings
+weight: 10
+title: Global platform settings
 layout: redirect
 ---
 
@@ -50,24 +50,4 @@ The expiry date-time will be updated based on the duration specified in the **Va
 
 Details on the status of support requests and support user access for a tenant can be found in the **Properties** tab of the tenant, see [{{< enterprise-tenant >}} > Managing tenants](/users-guide/enterprise-tenant/#managing-tenants).
 
-<a name="configuring-support-users"></a>
-#### Configuring a support user
-
-A support user is a user in the {{< management-tenant >}} with specific permissions. This user can log in to the target tenant and impersonate the target user.
-
-To configure a user in the {{< management-tenant >}} as support user, you need to assign the relevant roles to the user. This can either be done by using a global role or by inventory roles.  
-
-**Using a global role**
-
-1. Create a role "Support" with "Support READ" and "Support ADMIN" permission.
-2. Assign the role "Support" to the respective user and remove all other roles for the user.
-
-**Using inventory roles**
-
-Using inventory roles, you can selectively assign a support user for specific subtenants.
-
-1. Create an inventory role called "Support" with type = "*" and permission = "All".
-2. Create a group of all subtenants which you want to be supported by the user.
-3. Assign the "Support" inventory role to above group as described in [Administration > Managing permissions > Assigning inventory roles to users](/users-guide/administration#attach-inventory).
-
-> **Info:** The support user feature does not work when the support user has two-factor authentication enabled, but no phone number is provided. The phone number has to be provided first, in order to login as a support user.
+For details on configuring a support user, see [To configure a support user](#configuring-support-users).
