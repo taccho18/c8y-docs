@@ -4,7 +4,7 @@ title: Viewing audit logs
 
 ---
 
-Audit logs show the operations that have been processed by users.
+Audit logs show the operations that have been carried out by users.
 
 To view the audit log list, click **Audit logs** in the **Account** menu. For each log entry, the following information is provided:
 
