@@ -80,7 +80,7 @@ Turn on **Custom Actions** to map LWM2M data into {{< product-c8y-iot >}} using 
 
 ![Custom actions](/images/device-protocols/lwm2m/lwm2m-customactions.png)
 
-{{< product-c8y-iot >}} LWM2M allows the set of custom actions to be extended using decoder microservices. A decoder microservice is an ordinary {{< product-c8y-iot >}} microservice that implements a simple decoder interface. The LWM2M agent calls this microservice for decoding data in a customer-specific way. We are providing an according example how to write such a decoder microservice in our public [Bitbucket repository](https://bitbucket.org/m2m/cumulocity-examples/src/develop/).
+{{< product-c8y-iot >}} LWM2M allows the set of custom actions to be extended using decoder microservices. A decoder microservice is an ordinary {{< product-c8y-iot >}} microservice that implements a simple decoder interface. The LWM2M agent calls this microservice for decoding data in a customer-specific way. We are providing an according example how to write such a decoder microservice in our public [GitHub repository](https://github.com/SoftwareAG/cumulocity-examples).
 
 ##### Predefined custom actions
 
@@ -120,3 +120,15 @@ If **Auto-Observe** is turned on for a resource, the LWM2M server observes a spe
 > **Info:** At least one functionality must be set to enable "Auto observe".
 
 ![Resource](/images/device-protocols/lwm2m/lwm2m-autoobserve.png)
+
+
+### Alarms on device protocol mapping failures
+
+There are 2 types of alarms raised related to device protocol mapping failures.
+
+![Alarms on mapping failures](/images/device-protocols/lwm2m/lwm2m-mapping-failure-alarms.png)
+
+- Alarm for no mapping known: This alarm is raised when value is read or observed but no mapping for this resource is found.
+This can be resolved by importing device protocol for this resource.
+
+- Alarm due to non-numeric/non-boolean value received for measurement mapping: This alarm is raised when the resource has a measurement mapping set up but measurement cannot be created because received value is a non-numeric/non-boolean value.

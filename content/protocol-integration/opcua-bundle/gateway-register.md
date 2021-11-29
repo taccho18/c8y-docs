@@ -227,6 +227,10 @@ gateway:
     # subscription notification data from the OPC UA server. The subscription reporting rate (publish interval)  
     # and the volume of sampling data should be taken into account to choose a suitable buffer size.
     notificationBufferSize: 500
+    # The recreateFailedItems flag can be used to enable the feature of a subscription so that it automatically retries to create the monitored items
+    # if they fail due to error code Bad_NodeIdUnknown. It assumes that the NodeIds are correct, but it hasn't been added to the
+    # server's address space yet. The default value is false.
+    recreateFailedItems: false
 
   # Internal repository configurations
   repositories:
@@ -372,3 +376,24 @@ completely remove all the associated managed objects. Thereafter, the gateway ca
 
 If the gateway is directly deleted from the list of devices before deleting gateway's servers and devices of those servers, by selecting the checkbox **Also delete child devices of this device**,
 then the server managed object will be deleted, but the corresponding address space objects will not be deleted as they are not children of the gateway.
+
+### Downgrade to an earlier version
+
+Due to security improvements, downgrades from 10.12.0 to previous versions are not directly supported.
+However, if required, a downgrade is possible by following the instructions below:
+
+1. Shut down the current version of the gateway and remember the gateway managed object ID from the devices list.
+2. Send an HTTP PUT command to your tenant to reset the identity:
+
+PUT {url_to_your_tenant}/inventory/managedObjects/{device_id}
+```json
+   {
+   "c8y_ua_IdentityConfig":null
+   }
+```
+3. The response code should be 200 OK.
+4. Start the old version of the gateway.
+
+After completing these steps a new identity will be created in the old structure.
+
+It is possible to upgrade to version 10.12.0 or above at a later stage. The necessary conversion will be done automatically. 

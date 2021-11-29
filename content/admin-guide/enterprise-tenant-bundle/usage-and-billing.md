@@ -183,7 +183,7 @@ In case of resources-based billing, charging depends on the isolation level:
 * Per-tenant - the subscriber tenant is charged for used resources
 * Multi-tenant - the owner of the microservice is charged for used resources
 
-In case of multi-tenant isolation level, the owner of a microservice (e.g. the {{< management-tenant >}} of an {{< management-tenant >}} or service provider) is charged for the used resources of the subtenants. The subtenants should be charged based on the subscription according to the agreement between the microservice owner and the subscribed tenant. The list of subscribed applications is available as part of the [tenant applications](https://{{< domain-c8y >}}/api/#tag/Tenant-applications) as `subscribedApplications`.
+In case of multi-tenant isolation level, the owner of a microservice (e.g. the {{< management-tenant >}} of an {{< management-tenant >}} or service provider) is charged for the used resources of the subtenants. The subtenants should be charged based on the subscription according to the agreement between the microservice owner and the subscribed tenant. The list of subscribed applications is available as part of the [tenant applications](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Tenant-applications) as `subscribedApplications`.
 
 #### Resources usage assignment for billing mode and isolation level
 
@@ -226,7 +226,7 @@ The information on the microservice usage is presented in the **Usage Statistics
 
 ![Tenant statistics](/images/users-guide/enterprise-tenant/et-subtenants-usage-statistics-microservice.png)
 
-For more details, refer to [Tenants](https://{{< domain-c8y >}}/api/#tag/Tenants) in the {{< openapi >}}. Note that details are available only for daily usage. For a summary query only the sum of all issued requests is returned.
+For more details, refer to [Tenants](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Tenants) in the {{< openapi >}}. Note that details are available only for daily usage. For a summary query only the sum of all issued requests is returned.
 
 #### Scaling
 
@@ -241,7 +241,7 @@ Note that an audit record is created for every change of the number of instances
 
 ![Audit logs](/images/users-guide/enterprise-tenant/et-audit-logs-microscaling.png)
 
-For more information, refer to [Audits](https://{{< domain-c8y >}}/api/#tag/Audits) in the {{< openapi >}}.
+For more information, refer to [Audits](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Audits) in the {{< openapi >}}.
 
 
 ### Timezone handling
@@ -327,6 +327,7 @@ Usage statistics consist of values that are progressive like the request count a
 |Subscribed applications | 9, 17 and EOD|
 |Microservice resources | 9, 17 and EOD|
 
+<a name="Lifecycle"></a>
 ### Lifecycle
 
 **Tenant**
@@ -334,7 +335,7 @@ Usage statistics consist of values that are progressive like the request count a
 A {{< product-c8y-iot >}} platform tenant can have several states:
 
   * Active - The common state when the tenant can interact with the platform. In that state all billing values are stored and updated.
-  * Suspended - Suspended tenants are not billed for request count and microservice resources, the only value that is still counted is storage size. The microservice resource usage is billed as "used", i.e. when the tenant is switched to suspended state all microservices are stopped so there are no resources to bill.
+  * Suspended - Suspended tenants are not billed for request count and microservice resources, the only value that is still counted is the existence of the tenant and the storage size. The microservice resource usage is billed as "used", i.e. when the tenant is switched to suspended state all microservices are stopped so there are no resources to bill.
   * Deleted - This is the point of no return. The tenant is not billed for any resources but there is no way of restoring the data also.
 
 
@@ -564,7 +565,7 @@ The table below presents which values are used in each model for billing purpose
 <td style="text-align:left">x</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://{{< domain-c8y >}}/api/#tag/Tenant-API">DeviceStatistics</a></td>
+<td style="text-align:left"><a href="https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Tenant-API">DeviceStatistics</a></td>
 <td style="text-align:left">Monthly measurements, events and alarms created and updated per device</td>
 <td style="text-align:left"></td>
 <td style="text-align:left">x</td>

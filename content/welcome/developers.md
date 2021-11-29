@@ -53,7 +53,7 @@ Moreover, the <a href="/apama/overview-analytics/"><i>Streaming Analytics guide<
 
 ### OpenAPI Specification
 
-A complete OpenAPI Specification for the {{< product-c8y-iot >}} REST API is available at [https://{{< domain-c8y >}}/api](https://{{< domain-c8y >}}/api). The OpenAPI Specification describes the entire {{< product-c8y-iot >}} REST API (i.e. available endpoints, operations on each endpoint, input and output for each operation, authentication methods and more) following the OpenAPI 3.0 standard.
+A complete OpenAPI Specification for the {{< product-c8y-iot >}} REST API is available at [https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}). The OpenAPI Specification describes the entire {{< product-c8y-iot >}} REST API (i.e. available endpoints, operations on each endpoint, input and output for each operation, authentication methods and more) following the OpenAPI 3.0 standard.
 
 
 ### Developer community
@@ -63,7 +63,7 @@ Collaborate with {{< product-c8y-iot >}} community experts on our [{{< company-s
 Here you can:
 
 * Browse through our vast knowledge base of tutorials, articles, code samples, tips and tricks.
-* As questions, brainstorm solutions or discuss best practices in our discussion forum
-* Get the latest {{< company-sag >}} news and announcements
+* Ask questions, brainstorm solutions or discuss best practices in our discussion forum.
+* Get the latest {{< company-sag >}} news and announcements.
 
 Moreover you will find links to further resources like [GitHub](https://github.com/softwareag).

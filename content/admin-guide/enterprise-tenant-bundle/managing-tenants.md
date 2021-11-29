@@ -102,7 +102,7 @@ In the **Properties** tab, all fields are editable except of **ID**, **Domain/ U
 To change the tenant password, click **Change password**, enter the new password in the upcoming fields and click **Save**.
 
 <a name="user-access"></a>
-#### Support user access
+#### Support user access information
 
 At the right of the **Properties** tab, you can find information on the support user requests/access for the subtenants.
 
@@ -139,9 +139,11 @@ The following information is displayed here:
 
 ### Suspending subtenants
 
-Suspending a tenant blocks any access to this tenant, regardless whether the access is from devices, users or other applications.
+Suspending a tenant blocks any access to this tenant, regardless whether the access is from devices, users or other applications. In addition all its microservices are undeployed, and if the tenant is reactivated all its microservices are re-deployed.
 
-If a tenant is suspended, the tenant's data remains in the database and can be made available later by clicking **Activate**.
+The tenant's data remains in the database and can be made available later by clicking **Activate**.
+
+Refer to [Usage statistics and billing > Lifecycle](#lifecycle) for details on the billing perspective of suspended tenants.
 
 >**Important:** Suspended tenants for all {{< product-c8y-iot >}} public cloud instances will be automatically deleted after 60 days.
 >
@@ -230,10 +232,14 @@ Platform administrators can limit the request rate of each subtenant via the fol
 * Limit stream queue - Limit of MQTT request queue for tenant
 * Limit stream requests - Limit of MQTT requests for tenant per second
 
+The request throttling mechanism is only enabled when both HTTP properties (limit HTTP queue and limit HTTP requests) are configured. If one of the values is omitted, it does not work.
+
+>**Important:** Rate limiting can be an effective countermeasure against threats like brute force login attempts, API abuse and request flooding thus reducing the number of malicious/unwanted traffic. This helps in protecting against DoS (Denial of Service) attacks and saving the available bandwidth for legitimate requests.
+
 It is also possible to customize the buffer size for the CEP queue and the data broker queue for a particular tenant. This can be done from the {{< management-tenant >}} by using the following subtenant custom fragments:
 
- - cep.queue.limit
- - data-broker.queue.limit
+* cep.queue.limit
+* data-broker.queue.limit
 
 When there is no limit on tenant and system level, the limit feature is considered as disabled and the tenant gains unlimited access. To switch off request rate limiting after it was enabled, set the value to "-1".
 
@@ -271,7 +277,7 @@ For each tenant policy, the name, an optional description and the number of opti
 
 #### To create a tenant policy
 
-1. Click **Add tenant policy** in the top menu bar.
+1. Click **Add policy** in the top menu bar.
 <br>![Add new policy](/images/users-guide/enterprise-tenant/et-tenant-policy-add.png)<br>
 2. In the resulting dialog box, enter a name and an optional description.
 3. Add at least one retention rule. For details on creating retention rules, see [Administration > Managing data retention > Retention rules](/users-guide/administration#retention-rules).
@@ -310,7 +316,7 @@ In the **Default subscriptions** page, you can configure two separate lists of a
 - to every new tenant on its creation,
 - to every existing tenant on platform upgrade.
 
-> **Info:** These default lists can be overridden for particular subtenants by setting additional tenant options, for example via tenant policy. For details, see [Default subscriptions](#default-subscriptions) below or the [Tenant API](https://{{< domain-c8y >}}/api/#tag/Tenant-API) in the {{< openapi >}}.
+> **Info:** These default lists can be overridden for particular subtenants by setting additional tenant options, for example via tenant policy. For details, see [Default subscriptions](#default-subscriptions) below or the [Tenant API](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Tenant-API) in the {{< openapi >}}.
 
 In the middle of the page, the list of subscribable applications (both web applications and microservices) is displayed, which consists of
 
