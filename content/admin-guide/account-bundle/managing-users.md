@@ -8,7 +8,7 @@ aliases:
 The user management feature allows you to manage the users within your tenant. With this functionality you may:
 
 - Create, update and delete users.
-- Assign user names and set passwords.
+- Assign usernames and set passwords.
 - Store user details.
 - Choose basic login options.
 - Enable additional login security by using Two-Factor Authentication (TFA).
@@ -38,7 +38,7 @@ To view all users in your tenant, click **Users** in the **Account** menu in the
 
 A user list will be displayed, providing the following information for each user:
 
-* The user name that is used to access the tenant.
+* The username that is used to access the tenant.
 * The name and email of the user, if set.
 * The global roles assigned to the user.
 * The [strength](/users-guide/getting-started/#login) of the password set for the user.
@@ -84,7 +84,7 @@ Follow these steps to create a new user in your tenant.
 	</tr>
 	<tr>
 	<td align="left">Login alias</td>
-	<td align="left">In addition to the user name, an optional alias can be provided to be used to log on. In contrast to username, this alias may be changed if required. User alias is not supported for devices.</td>
+	<td align="left">In addition to the username, an optional alias can be provided to be used to log on. In contrast to username, this alias may be changed if required. User alias is not supported for devices.</td>
 	</tr>
 	<tr>
 	<td align="left">Email</td>

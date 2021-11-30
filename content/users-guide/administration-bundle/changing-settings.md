@@ -233,7 +233,7 @@ When a user logs in with an access token, the username can be derived from a JWT
 
  ![OAuth configuration](/images/users-guide/Administration/admin-sso-3.png)
 
- If the **Use constant value** checkbox is selected, a constant user ID is used for all users who log in to the {{< product-c8y-iot >}} platform via SSO. This means that all users who log in via SSO share the same user account in the {{< product-c8y-iot >}} platform. Usage of this option is not recommended.
+If the **Use constant value** checkbox is selected, a constant user ID is used for all users who log in to the {{< product-c8y-iot >}} platform via SSO. This means that all users who log in via SSO share the same user account in the {{< product-c8y-iot >}} platform. Usage of this option is not recommended.
 
 Next, the **User data mappings** can be configured:
 
