@@ -10,30 +10,45 @@ helpcontent:
     Moreover you can select the global roles for a user, see also *Administration > Managing permissions* in the *User guide*."
 ---
 
-The user management feature allows you to manage the users within your tenant. With this functionality you may:
+> **This page includes the following instructions:**
+>- [To view users](#view-users)
+>- [To add a user](#creating-users)
+>- [To edit a user](#edit-user)
+>- [To copy inventory roles](#copy-inventory-roles)
+>- [To delegate/undelegate user hierarchies](#delegate-user-hierarchies)
+>- [To disable/enable a user](#disable-user)
+>- [To delete a user](#delete-user)
+
+
+The user management feature allows you to manage the users within your tenant.
+
+With this functionality you may:
 
 - Create users.
 - Assign usernames and set passwords.
 - Store user details.
-- Choose basic login options.
-- Enable additional login security by using Two-Factor Authentication (TFA).
+- Configure login and security options.
 
-> **Info:** The user needs to have a role with the user management permission ADMIN or CREATE to be able to do so.
+> **Requirements:** You need to have a role with the user management permission ADMIN or CREATE to be able to use this functionality.
 
-If your tenant is configured for using single sign-on (SSO) in {{< sag-cloud >}}, new users should be created under **My Cloud**, accessible through the application switcher in the upper right corner, so that they are able to use the single sign-on feature.
+> **Info:** If your tenant is configured for using single sign-on (SSO) in {{< sag-cloud >}}, new users should be created under **My Cloud**, accessible through the application switcher in the upper right corner, so that they are able to use the single sign-on feature.
+<br>
+>For users created via an external authorization server, updating the following settings in {{< product-c8y-iot >}} will have no effect (will be reset on the next user re-login):
+<br>
+><li>user info (login alias, email, first name, last name, telephone)</li>
+><li>global roles → configurable via SSO access mapping</li>
+><li>application access → configurable via SSO access mapping</li>
+><br>Moreover, password reset in {{< product-c8y-iot >}} is disabled for users created through an external authentication server.
+><br>Users which are using single sign-on cannot change the password of users which are managed by the platform.
 
-For users created via an external authorization server, updating the following settings in {{< product-c8y-iot >}} will have no effect (will be reset on the next user re-login):
+>**Related topics**:
+>- [Managing permissions](#managing-permissions).
+>- [Managing user hierarchies](/users-guide/enterprise-tenant/#user-hierarchies).
+>- [Two-factor authentication](/users-guide/administration/#tfa).
+>- For managing users via REST, see [Users](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Users) in the {{< openapi >}}.
 
-* user info (login alias, email, first name, last name, telephone)
-* global roles → configurable via SSO access mapping
-* application access → configurable via SSO access mapping
-
-Moreover, password reset in {{< product-c8y-iot >}} is disabled for users created through an external authentication server.
-
-> **Info:** Users which are using single sign-on cannot change the password of users which are managed by the platform.
-
-
-### Viewing users
+<a name="view-users"></a>
+### To view users
 
 To view all users in your tenant, click **Users** in the **Account** menu in the navigator.
 
@@ -124,14 +139,16 @@ The new user will be added to the user list.
 
 > **Info:** By default, manually created users always have the "Own&#95;User&#95;Management" permissions set to active.
 
+<a name="edit-user"></a>
 ### To edit a user
 
 1. Click the menu icon at the right of the respective row and then click **Edit**. All fields except **Username** and **Send password reset link as email** can be changed. For details on the fields, see [To add a user](#creating-users).
 2. Click **Change password** to change the password.
 3. Click **Save** to apply your settings.
 
-> **Info:** You need a role with user management permission to perform this option.
+> **Requirements:** You need a role with user management permission to perform this option.
 
+<a name="copy-inventory-roles"></a>
 ### To copy inventory roles
 
 1. Click the menu icon at the right of the respective row and then click **Copy inventory roles from another user**.
@@ -141,8 +158,9 @@ The new user will be added to the user list.
 
 The inventory roles will be copied from the selected user.
 
-> **Info:** You need a role with user management permission to perform this option.
+> **Requirements:** You need a role with user management permission to perform this option.
 
+<a name="delegate-user-hierarchies"></a>
 ### To delegate/undelegate user hierarchies
 
 Click the menu icon at the right of the respective row and then click **Delegate** to delegate your user hierarchies and permissions to a user.
@@ -151,16 +169,18 @@ Click **Undelegate** to remove a delegation.
 
 Refer to [Managing User Hierarchies](/users-guide/enterprise-tenant#user-hierarchies) for details on delegation.
 
-> **Info:** You need a role with user management permission to perform this option.
+> **Requirements:** You need a role with user management permission to perform this option.
 
+<a name="diasble-user"></a>
 ### To disable/enable a user
 
 Click the menu icon at the right of the respective row and then click **Disable** to disable an active user, or click **Enable** to enable a user that has been disabled.
 
-> **Info:** You need a role with user management permission to perform this option.
+> **Requirements:** You need a role with user management permission to perform this option.
 
+<a name="delete-user"></a>
 ### To delete a user
 
 Click the menu icon at the right of the respective row and then click **Delete**.
 
-> **Info:** You need a role with user management permission to perform this option.
+> **Requirements:** You need a role with user management permission to perform this option.

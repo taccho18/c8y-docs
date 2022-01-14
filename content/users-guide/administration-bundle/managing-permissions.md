@@ -17,17 +17,38 @@ helpcontent:
   For details on working with global roles and inventory roles, see *Administration > Managing permissions* in the *User guide*."
 ---
 
+> **This page includes the following instructions:**
+>- [To view global roles](#view-global)
+>- [To add a global role](#create-edit-roles)
+>- [To assign global roles](#attach-roles)
+>- [To view inventory roles](#view-inventory)
+>- [To add an inventory role](#add-inventory)
+>- [To assign inventory roles to users](#attach-inventory)
+>- [Troubleshooting permissions](#troubleshooting)
+>- [Grating application access](#app-access)
+
 Permissions define what a user is allowed to do in {{< product-c8y-iot >}} applications. To manage permissions more easily, they are grouped into so-called "roles". Every user can be associated with a number of roles, adding up permissions of the user.
 
 The following types of roles can be associated with users:
 
-- Global roles: Contain permissions that apply to all data within a tenant.
-- Inventory roles: Contain permissions that apply to groups of devices.
+- [Global roles](#global): Contain permissions that apply to all data within a tenant.
+- [Inventory roles](#inventory): Contain permissions that apply to groups of devices.
 
 Moreover, application access can be granted to enable a user to use an application.
 
+> **Requirements:**
+
+>**Related topics**:
+>- [Managing users](#managing-users).
+>- [Managing applications](#managing-applications).
+>- For managing permissions via REST, see [Roles](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Roles) and [Inventory Roles](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Inventory-Roles) in the {{< openapi >}}.
+>- For further information on fragment types, see the {{< product-c8y-iot >}} [sensor library](/reference/sensor-library/) or [device management library](/reference/device-management-library/). 
+
 <a name="global"></a>
 ### Global roles
+
+<a name="view-global"></a>
+#### To view global roles
 
 Click **Roles** in the **Account** menu to display a list of configured roles.
 
@@ -294,6 +315,9 @@ Click **Save** to save your settings.
 
 Inventory roles contain permissions that you can assign to groups of devices. For example, an inventory role can contain the permission to restart a device. You can assign this inventory role to a group of devices "region north" and to a user "smith". The result is that the user "smith" can restart all devices that are in the group "region north" or any of its subgroups.
 
+<a name="view-inventory"></a>
+#### To view inventory roles
+
 To view the currently configured inventory roles, click **Roles** in the **Account** menu and switch to the **Inventory roles** tab.
 
 <img src="/images/users-guide/Administration/admin-roles-inventory.png" alt="Context menu">
@@ -309,7 +333,7 @@ The following default inventory roles are initially available in new tenants:
 |Operations: Restart Device|Can restart devices.
 |Reader|Can read all data of the asset.
 
-
+<a name="add-inventory"></a>
 #### To add an inventory role
 
 Click **Add Role** in the **Inventory roles** tab.
@@ -373,7 +397,7 @@ You can also copy inventory roles from another user. To copy roles, click **Copy
 
 <img src="/images/users-guide/Administration/admin-inventory-role-copy.png" alt="Copy roles">
 
-
+<a name="troubleshooting"></a>
 ### Troubleshooting permissions
 
 If you try to perform actions without sufficient permissions, an error message will occur.
