@@ -6,12 +6,22 @@ layout: redirect
 
 In this tutorial, you will learn how to use MQTT with {{< product-c8y-iot >}} using pre-defined messages (called "static templates").
 
-### Prerequisites
+>**On this page:**
+>
+>* [Configuring the MQTT connection](#configuring-the-mqtt-connection)
+>* [Sending data](#sending-data)
+>    * [Creating a device](#creating-the-device)
+>    * [Creating measurements](#creating-measurements)
+>    * [Creating alarms](#creating-alarms)
+>    * [Creating events](#creating-events)
+>* [Receiving data](#receiving-data)
+>    * [Receiving operations](#receiving-data)
+>    * [Learning from errors](#learning-from-errors)
 
-In order to follow this tutorial, check the following prerequisites:
-
-* You have a valid tenant, a user and a password in order to access {{< product-c8y-iot >}}.
-* You have installed [MQTTBox](https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf) or a similar MQTT tool.
+>**Prerequisites**:
+>
+>* You have a valid tenant, a user and a password in order to access {{< product-c8y-iot >}}.
+>* You have installed [MQTTBox](https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf) or a similar MQTT tool.
 
 >**Info:** The screenshots in the tutorial use MQTTBox. Other tools may look different.
 
@@ -215,3 +225,9 @@ we can see a message on the topic because the template `999` is unknown.
 ```text
 40,999,No static template for this message id
 ```
+
+>**Related topics:**
+>
+>* [Reference > SmartREST](../../reference/smartrest-two)
+>* [Reference > Device management library](../../reference/device-management-library)
+>* [User Guide > Device management](../../users-guide/device-management)

@@ -8,6 +8,37 @@ Here you will learn how to create your first microservice that can be deployed o
 
 Requests to a microservice can be authenticated using basic authentication or OAuth. Refer to [Authentication and authorization](/microservice-sdk/concept/#authentication-and-authorization) for more details.
 
+>**On this page:**
+>
+>* [Developing the "Hello world" microservice](#developing-the-hello-world-microservice)
+>    * [Create a maven project](#create-a-maven-project)
+>    * [Specify the properties](#specify-the-properties)
+>    * [Add the microservice library](#add-the-microservice-library)
+>    * [Add repositories and dependencies](#add-repositories-and-dependencies)
+>    * [Configure the build plugins](#configure-the-build-plugins)
+>    * [Create a Java application](#create-a-java-application)
+>    * [Configure the microservice application](#configure-the-microservice-application)
+>    * [Build the microservice application](#build-the-microservice-application)
+>* [Developing the "Hello world" microservice](#deploying-the-hello-world-microservice)
+>    * [Build the microservice application](#test-the-deployed-microservice
+>* [Running the microservice locally](#running-the-microservice-locally)
+>    * [Create the application](#create-the-application)
+>    * [Acquire the microserivce bootstraop user](#acquire-the-microservice-bootstrap-user)
+>    * [Run the Docker container](#run-the-docker-container)
+>    * [Subscribe to the microservice](#subscribe-to-the-microservice)
+>* [Improving the microservice](#improving-the-microservice)
+
+>**Prerequisites:**
+>
+>* {{< product-c8y-iot >}} credentials
+>* A dedicated tenant
+>
+>In case you do not have that yet, create an account on the [{{< product-c8y-iot >}} platform](https://{{< domain-c8y >}}), for example by using a free trial. At this step you will be provided with a dedicated URL address for your tenant.
+>
+>* A recommended Java version
+>* Maven 3 or higher. It can be downloaded from the [Maven website](https://maven.apache.org/download.cgi).
+>* A Docker installation version 1.12.6 or higher. Docker can be downloaded from the [Docker site](https://www.docker.com/get-started).
+
 ### Prerequisites
 
 You need to have {{< product-c8y-iot >}} credentials and a dedicated tenant. In case you do not have that yet, create an account on the [{{< product-c8y-iot >}} platform](https://{{< domain-c8y >}}), for example by using a free trial. At this step you will be provided with a dedicated URL address for your tenant.
@@ -476,3 +507,8 @@ You may also use the name parameter, e.g. <http://localhost:8082/hello?name=Neo>
 ### Improving the microservice
 
 Now that you have done your first steps, check out the section [Developing microservices](/microservice-sdk/java#developing-microservice) to find out what else can be implemented. Review also the [Java example](/microservice-sdk/java/#java-example) in this guide to learn using more features of the microservice SDK and REST API by employing third-party services.
+
+>**Related topics:**
+>
+>* [Concepts > Developing applications](../../concepts/applications/)
+>* [User Guide > Administration > Managing applications](../../users-guide/administration/#managing-applications)
