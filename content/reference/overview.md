@@ -31,6 +31,26 @@ aliases:
   - /reference/retention-rules
 ---
 
+{{< note >}}
+This is a note admonition.
+{{< /note >}}
+
+{{< note title="Custom Note" >}}
+This is a note admonition using the default `title`.
+{{< /note >}}
+
+{{< tip >}}
+This is a tip admonition.
+{{< /tip >}}
+
+{{< warning >}}
+This is a warning admonition.
+{{< /warning >}}
+
+{{< important >}}
+This is an important admonition.
+{{< /important >}}
+
 Our API reference has moved:
 
 We are now using OpenAPI to maintain our API documentation. Visit [our new API documentation](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}) and have a look.
