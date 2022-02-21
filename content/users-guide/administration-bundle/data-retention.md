@@ -16,17 +16,19 @@ helpcontent:
 <a name="retention-rules"></a>
 ### Retention rules
 
-Retention rules gives you control on how long data is stored in your account. By default, all historical data is deleted after 60 days (configurable in the system settings).
+Retention rules give you control on how long data is stored in your account. By default, all historical data is deleted after 60 days (configurable in the system settings by the platform administrator). You might however want to store measurements for 90 days for example, but delete alarms already after 10 days.
 
-You might however want to store measurements for 90 days for example, but delete alarms already after 10 days.
+>**Info:** Retention rules are usually run during the night. When you edit a retention rule, you will not see an immediate effect in the **Usage** section on the **Home** screen of the Administration application.
 
-Retention rules are usually run during the night. When you edit a retention rule, you will not see an immediate effect in the **Usage** section on the **Home** screen of the Administration application.
+>**Requirements:** You need the following permissions:
+- To manage retention rules: ADMIN rights for the permission category "Retention rules"
+- To view retention rules: READ rights for the permission category "Retention rules".
 
 Click **Retention rules** in the **Management** menu to view a list of retention rules configured for your account.
 
 <img src="/images/users-guide/Administration/admin-retention-rules.png" alt="Retention rules">
 
-For each rule, the rule name, details on the data to be deleted (fragment type, type and source, see below) and the maximum age in days is provided.
+For each rule, the rule name, details on the data to be deleted (such as fragment type, type and source) and the maximum age in days is provided.
 
 The asterisk ("*") indicates that data with any value will be cleaned up.
 
@@ -45,11 +47,11 @@ The retention rule will be added to the list.
 
 >**Info:** Per default, an asterisk ("*") is set in all fields except the **Maximum age** field, to include all values.
 
->**Info:** Alarms are only removed if they have a status of CLEARED.
+>**Info:** Alarms are only removed if they have the status CLEARED.
 
 #### To edit a retention rule
 
-Simply click the row of the rule you want to edit.
+Click the row of the rule you want to edit.
 
 For details on the fields, see [To add a retention rule](#add-retention-rule).
 
@@ -60,21 +62,21 @@ Hover over the rule you want to delete and click the delete icon at the right.
 
 <img src="/images/users-guide/Administration/admin-retention-rules-delete.png" alt="Delete retention rule">
 
->**Info:** All retention rules are executed sequentially and independent of each other. So if we have two retention rules, a more specific one with a greater maximum age that defines a subset of the documents that are defined by a more common rule with a lower maximum age, then effectively it will work as if we had a single, more common rule.
->
->For example given the two following rules:
->   
-><img src="/images/users-guide/Administration/admin-retention-rules-commspec1.png" alt="Retention rules"/>
->
->All measurements with the type `c8y_Temperature` which are older than 30 days will be removed, including those where the source equals `12345`.
->             
->On the other hand when we have the following retention rules defined:
->
-><img src="/images/users-guide/Administration/admin-retention-rules-commspec2.png" alt="Retention rules"/>
->
->The retention process removes the measurements with the type `c8y_Temperature` which are older than 30 days, all other measurements will be removed when they are older than 60 days.
+All retention rules are executed sequentially and independent of each other. So if we have two retention rules, a more specific one with a greater maximum age that defines a subset of the data that is defined by a more common rule with a lower maximum age, then effectively it will work as if we had a single, more common rule.
 
->**Info:** The source parameter is the ID of the device. When it is defined, the retention process only removes the documents directly related to the device represented by the source, not its children or groups it belongs to.
+For example given the following two rules:
+
+<img src="/images/users-guide/Administration/admin-retention-rules-commspec1.png" alt="Retention rules"/>
+
+All measurements with the type `c8y_Temperature` which are older than 30 days will be removed, including those where the source equals `12345`.
+
+On the other hand, when we have the following retention rules defined:
+
+<img src="/images/users-guide/Administration/admin-retention-rules-commspec2.png" alt="Retention rules"/>
+
+The retention process removes the measurements with the type `c8y_Temperature` which are older than 30 days, all other measurements will be removed when they are older than 60 days.
+
+>**Info:** The source parameter is the ID of the device. When it is defined, the retention process only removes the data directly related to the device represented by the source, not its children or groups it belongs to.
 
 <a name="files"></a>
 ### Managing files in the file repository
@@ -83,7 +85,7 @@ The file repository provides an overview of the files stored in your account.
 
 Click **Files repository** in the **Management** menu to see a list of files.
 
-The files listed can come from various sources. They can be software images, configuration snapshots taken from devices, log files from devices or web applications uploaded from the **All applications** page.
+The files listed can come from various sources. It can be software images, configuration snapshots taken from devices, log files from devices or web applications uploaded from the **All applications** page.
 
 For each file, the name of the file, its owner, the file type (i.e. image/bmp, text/csv), its size and the date when it was last updated is provided.
 

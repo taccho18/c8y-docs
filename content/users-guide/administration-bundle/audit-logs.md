@@ -1,15 +1,24 @@
 ---
 weight: 20
-title: Viewing audit logs
+title: Audit logs
 helpcontent:
   - label: audit-logs
-    title: Viewing audit logs
-    content: "Audit logs show the operations that users have carried out.
+    title: Audit logs
+    content: "Audit logs show security-relevant operations a user has processed.
 
       In order to easily search through logs, specify filter criteria in the top bar for type, date range or user and apply them."
 ---
 
-Audit logs show the operations that users have carried out.
+Audit logs show security-relevant operations a user has processed. For example, an audit log is generated when a user logs into a gateway.
+
+>**Requirements:** You need the following permissions:
+>- To view audit logs: READ rights for the permission category "Audit"
+
+>**Related topics**:
+>- For details on managing audit records via REST, see [Audits](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Audits) in the {{< openapi >}}.
+
+
+### To view audit logs
 
 To view the audit log list, click **Audit logs** in the **Accounts** menu. For each log entry, the following information is provided:
 
@@ -54,7 +63,7 @@ Only the last 100 logs are visible. Scroll down the page to **Load more** to vie
 
 >**Info:** The audit log list is not automatically refreshed after a realtime update for operations. Click **Reload** at the right of the top menu bar to update the list to the latest operations.
 
-### Filtering logs
+#### Filtering logs
 
 In order to easily search through logs, you may filter logs for
 
@@ -62,4 +71,4 @@ In order to easily search through logs, you may filter logs for
  - a date range providing a "From" and/or a "To" date,
  - the user.
 
-To apply a filter, click the **Apply** button next to the respective filter field. To discard filters, click the X icon next to the **Apply** button (only visible if filters are set).
+To apply a filter, click the **Apply** button next to the filter fields. To discard filters, click the X icon next to the **Apply** button (only visible if filters are set).
