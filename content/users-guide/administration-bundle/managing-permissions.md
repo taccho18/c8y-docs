@@ -42,7 +42,7 @@ Moreover, application access can be granted to enable a user to use an applicati
 >- [Managing users](#managing-users).
 >- [Managing applications](#managing-applications).
 >- For managing permissions via REST, see [Roles](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Roles) and [Inventory Roles](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Inventory-Roles) in the {{< openapi >}}.
->- For further information on fragment types, see the {{< product-c8y-iot >}} [sensor library](/reference/sensor-library/) or [device management library](/reference/device-management-library/). 
+>- For further information on fragment types, see the {{< product-c8y-iot >}} [sensor library](/reference/sensor-library/) or [device management library](/reference/device-management-library/).
 
 <a name="global"></a>
 ### Global roles
@@ -50,15 +50,15 @@ Moreover, application access can be granted to enable a user to use an applicati
 <a name="view-global"></a>
 #### To view global roles
 
-Click **Roles** in the **Account** menu to display a list of configured roles.
+Click **Roles** in the **Accounts** menu to display a list of configured roles.
 
 <img src="/images/users-guide/Administration/admin-global-roles.png" alt="Context menu">
 
-In the **Global roles** tab you can find the roles which grant permissions on a general level. There are several global roles pre-defined, but you can define your own according to your needs.
+In the **Global roles** tab you can find the roles which grant permissions on a system level. There are several global roles pre-defined, but you can define your own according to your needs.
 
-> **Info:** The pre-defined roles are not fully configured. They can be seen as samples which are pre-configured for a particular purpose. You may use them as a starting point and further adapt them to your individual needs.
+> **Info:** The pre-defined roles are configured as samples for a particular purpose. You may use them as a starting point and further adapt them to your individual needs.
 
-> On creating a new user, make sure that the global roles you assign to the user cover all permissions relevant for this particular user. If, for example, a user only has the role "Cockpit User" (see below), the user will only be able to access the Cockpit application and nothing more.  
+> On creating a new user, make sure that the global roles you assign to the user contain all necessary permissions relevant for this particular user in either of those roles assigned. Permissions from different roles are merged together when assigned to the same user. If, for example, a user only has the role "Cockpit User" (see below), the user is only able to access the Cockpit application and nothing more. But if you also assign inventory permission via some of the available roles, the user will get access to the whole inventory, such as devices, groups, and configurations.
 
 The roles "admins" and "devices" have a special status:
 
@@ -74,7 +74,7 @@ The roles "admins" and "devices" have a special status:
 <tbody>
 <tr>
 <td align="left">admins</td>
-<td align="left">All permissions are enabled. The initial administrator, the first user created in a tenant, has this role.</td>
+<td align="left">Administrative permissions are enabled. The initial administrator, the first user created in a tenant, has this role.</td>
 </tr>
 <tr>
 <td align="left">devices</td>
@@ -318,7 +318,7 @@ Inventory roles contain permissions that you can assign to groups of devices. Fo
 <a name="view-inventory"></a>
 #### To view inventory roles
 
-To view the currently configured inventory roles, click **Roles** in the **Account** menu and switch to the **Inventory roles** tab.
+To view the currently configured inventory roles, click **Roles** in the **Accounts** menu and switch to the **Inventory roles** tab.
 
 <img src="/images/users-guide/Administration/admin-roles-inventory.png" alt="Context menu">
 
@@ -329,7 +329,7 @@ The following default inventory roles are initially available in new tenants:
 |Role|Description|
 |:---|:---|
 |Manager| Can read all data of the asset and manage all inventory data but cannot perform operations. In addition, can manage inventory data (including dashboards) and alarms.
-|Operations: All|Can remotely manage the assets by sending operations to a device (e.g. software updates, remote configurations).
+|Operations: All|Can remotely manage the assets by sending operations to a device (for example software updates, remote configurations).
 |Operations: Restart Device|Can restart devices.
 |Reader|Can read all data of the asset.
 
@@ -383,7 +383,7 @@ As another example, assume that you are using tracking devices. You want to allo
 
 Inventory roles are assigned to a user and a group of devices.
 
-To assign inventory roles, click **User** in the **Account** menu, select a user in the user list and switch to its **Inventory roles** tab.
+To assign inventory roles, click **User** in the **Accounts** menu, select a user in the user list and switch to its **Inventory roles** tab.
 
 In the **Inventory roles** tab you will see a tree of device groups. To assign an inventory role, click on the arrow right from a group. Select the relevant roles and click **Apply**. For details on the roles hover over the info icon next to it or refer to [Viewing inventory roles](#inventory).
 

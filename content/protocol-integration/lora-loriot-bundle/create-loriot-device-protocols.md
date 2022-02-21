@@ -9,8 +9,6 @@ To process data from LoRa devices, {{< product-c8y-iot >}} needs to understand t
 
 During the [device registration](#register-loriot-device), you can associate this device protocol. The received uplink message for this device with a hexadecimal payload will then be mapped to the ones you have configured in your device protocol.
 
-If a device protocol has been changed after being associated to a device, the reflection of the change can take up to 10 minutes because of the refresh mechanism of the Loriot server-side agent.
-
 > **Info:** Device protocol mapping only supports decoding for fixed byte positions based on the message type.
 The length for the device payload parts, which is set in the **Number of bits** field, can be maximum 32 bits (4 bytes).
 
@@ -89,7 +87,7 @@ Under **Value normalisation** define how the raw value should be transformed bef
 
 - **Multiplier**: This value is multiplied with the value extracted from the **Value selection**. It can be decimal, negative and positive. By default it is set to 1.
 - **Offset**: This value defines the offset that is added or subtracted. It can be decimal, negative and positive. By default it is set to 0.
-- **Unit** (optional): A unit can be defined which is saved together with the value (e.g. temperature unit "C" for degree Celsius).
+- **Unit** (optional): A unit can be defined which is saved together with the value (for example temperature unit "C" for degree Celsius).
 
 For detailed information on how to decode the payload, refer to the documentation of the device.
 

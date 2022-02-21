@@ -65,7 +65,7 @@ public PagedEventCollectionRepresentation get10Events () {
 
 ### Microservice security
 
-The `@EnableMicroserviceSecurity` annotation sets up the standard security configuration for microservices. It requires basic authorization for all endpoints (except for health check endpoint configured using `@EnableHealthIndicator`). A developer can secure its endpoints using standard Spring security annotations, e.g. `@PreAuthorize("hasRole('ROLE_A')")` and user's permissions will be validated against user's roles stored on the platform.
+The `@EnableMicroserviceSecurity` annotation sets up the standard security configuration for microservices. It requires basic authorization for all endpoints (except for health check endpoint configured using `@EnableHealthIndicator`). A developer can secure its endpoints using standard Spring security annotations, for example, `@PreAuthorize("hasRole('ROLE_A')")` and user's permissions will be validated against user's roles stored on the platform.
 
 ### Microservice subscription
 
@@ -376,7 +376,7 @@ There are three options to configure the server URL and credentials:
 * _pom.xml_ - Maven project configuration file
 * Command line
 
-All three ways can be used together, e.g. a goal partially can be configured in the _settings.xml_ and partially in the _pom.xml_.
+All three ways can be used together, for example, a goal partially can be configured in the _settings.xml_ and partially in the _pom.xml_.
 In case of conflicts, the command line configuration has the highest priority and _settings.xml_ configuration the lowest.
 
 To upload a microservice to the server you need to configure the following properties:
@@ -599,3 +599,46 @@ The following locations are searched for log-back file:
 * {CONF_DIR}/.{application_name}/logging.xml
 * {CONF_DIR}/{application_name}/logging.xml
 * /etc/{application_name}/logging.xml
+
+### Upgrade to Microservice SDK 10.13+
+
+A Spring Boot library was upgraded to 2.5.8, hence upgrading Microservice SDK to 10.13+ may require some additional development.
+
+* The `content(matcher)` method of RestAssured has been replaced with `body(matcher)`, see [RequestSpecification#content()](https://javadoc.io/doc/io.rest-assured/rest-assured/3.0.0/io/restassured/specification/RequestSpecification.html#content-byte:A-)
+* Spring Boot BOM does not define a version for joda-time, you may need to explicitly define version.
+
+  Maven example:
+    ```
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>2.10.10</version>
+    </dependency>
+    ```
+* Jackson 2.12.x does not provide the Joda Module by default, it might be required to add `jackson-datatype-joda` dependency and define Joda Module:
+  `new ObjectMapper().addModule(new JodaModule());` in a custom Microservice code.
+* Spring Boot 2.5.8 does not provide the _Bean Validation 2.0_ provider  as a transitive dependency anymore. Developers may have to explicitly define a validation provider, for example `hibernate-validator`, or add the `spring-boot-starter-validation` dependency.
+
+  Maven example:
+     ```
+     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+     </dependency>
+    ```
+* `junit-vintage-engine` was removed from the `spring-boot-starter-test` dependency, if you still use JUnit 4.x you have to add the Vintage engine explicitly:
+     ```
+     <dependency>
+       <groupId>org.junit.vintage</groupId>
+       <artifactId>junit-vintage-engine</artifactId>
+       <scope>test</scope>
+     </dependency>
+     ```
+
+* The `message` field and binding errors are disabled by default for Spring Boot native error responses. This can be enabled by overriding the `microservice_error_attributes.properties` file.
+
+  Sample content:
+   ```
+   server.error.include-message=ALWAYS
+   server.error.include-binding-errors=ALWAYS
+   ```
