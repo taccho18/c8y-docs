@@ -20,9 +20,15 @@ Retention rules give you control on how long data is stored in your account. By 
 
 >**Info:** Retention rules are usually run during the night. When you edit a retention rule, you will not see an immediate effect in the **Usage** section on the **Home** screen of the Administration application.
 
->**Requirements:** You need the following permissions:
+>**Requirements** You need the following permissions:
 - To manage retention rules: ADMIN rights for the permission category "Retention rules"
 - To view retention rules: READ rights for the permission category "Retention rules".
+
+>**Related topics**:
+>- For details on managing retention rules via REST, see [Retention](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Retention) in the {{< openapi >}}.
+
+<a name="view-retention-rule"></a>
+#### To view retention rules
 
 Click **Retention rules** in the **Management** menu to view a list of retention rules configured for your account.
 
@@ -83,11 +89,13 @@ The retention process removes the measurements with the type `c8y_Temperature` w
 
 The file repository provides an overview of the files stored in your account.
 
+#### To view files
+
 Click **Files repository** in the **Management** menu to see a list of files.
 
 The files listed can come from various sources. It can be software images, configuration snapshots taken from devices, log files from devices or web applications uploaded from the **All applications** page.
 
-For each file, the name of the file, its owner, the file type (i.e. image/bmp, text/csv), its size and the date when it was last updated is provided.
+For each file, the name of the file, its owner, the file type (that is, image/bmp, text/csv), its size and the date when it was last updated is provided.
 
 <img src="/images/users-guide/Administration/admin-files-repository.png" alt="Files Repository" style="max-width: 100%">
 
@@ -95,7 +103,7 @@ For each file, the name of the file, its owner, the file type (i.e. image/bmp, t
 
 Click **Upload file** in the top menu bar.
 
-<img src="/images/users-guide/Administration/admin-files-repository-upload.png" alt="Files Repository download modal" style="max-width: 100%">
+<img src="/images/users-guide/Administration/admin-files-repository-upload.png" alt="Files Repository download" style="max-width: 100%">
 
 In the resulting dialog box, select a file to be uploaded. If you want to upload more than one file, click **Add file** to select another file. You may also delete a file before uploading by clicking the delete icon at the right of the file field.
 

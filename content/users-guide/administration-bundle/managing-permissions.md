@@ -36,7 +36,10 @@ The following types of roles can be associated with users:
 
 Moreover, application access can be granted to enable a user to use an application.
 
-> **Requirements:**
+>**Requirements** You need the following permissions:
+>- To view global roles: READ or CREATE rights for the permission category "User management"
+>- To create a new global role: ADMIN rights for the permission category "User management"
+>- To assign global roles to users: ADMIN rights for the permission category "User management"
 
 >**Related topics**:
 >- [Managing users](#managing-users).

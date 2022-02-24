@@ -14,12 +14,13 @@ The Home screen of the Administration application provides
 
 <img src="/images/users-guide/Administration/admin-home.png" alt="Home screen">
 
-The capacity sections show:
+The capacity sections show the following values:
 
-* API requests: The total number of API requests, counting whenever some function in {{< product-c8y-iot >}} is invoked, regardless of whether the function is invoked from a device (such as sending a measurement) or from an application (such as viewing the list of devices).
-* Device API requests: Counting only when the API is called from a device (for example sending a measurement).
-* Storage: The total amount of data stored in your account. This amount can be changed by [retention policies](/users-guide/administration/#retention-rules) and by the amount and size of [stored files](/users-guide/administration#files).
-* Storage quota: If the storage limit per device is set, the user is restricted to a [maximum data usage](/users-guide/enterprise-tenant/#storage-quota).
-* Root devices: The number of root devices connected to your account, excluding child devices.
-* Devices: The total number of devices connected to your account. This is the sum of the devices listed in the [All devices](/users-guide/device-management#viewing-devices) page of the Device Management application and their direct and indirect child devices.
-* Users: The sum of all users configured in this account, active and inactive.
+* API requests - The total number of API requests, counting whenever some function in {{< product-c8y-iot >}} is invoked, regardless of whether the function is invoked from a device (such as sending a measurement) or from an application (such as viewing the list of devices).
+* Device API requests - Counting only when the API is called from a device (such as sending a measurement).
+* Inbound API requests - Counting only when the API is called from an application (such as viewing the list of devices).
+* Storage - The total amount of data stored in your account. This amount can be changed by [retention policies](/users-guide/administration/#retention-rules) and by the amount and size of [stored files](/users-guide/administration#files).
+* Storage quota - If the storage limit per device is set, the user is restricted to a [maximum data usage](/users-guide/enterprise-tenant/#storage-quota).
+* Root devices - The number of root devices connected to your account, excluding child devices.
+* Devices - The total number of devices connected to your account. This is the sum of the devices listed in the [All devices](/users-guide/device-management#viewing-devices) page of the Device Management application and their direct and indirect child devices.
+* Users - The sum of all users configured in this account, active and inactive.

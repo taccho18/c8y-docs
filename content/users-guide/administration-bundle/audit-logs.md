@@ -11,7 +11,7 @@ helpcontent:
 
 Audit logs show security-relevant operations a user has processed. For example, an audit log is generated when a user logs into a gateway.
 
->**Requirements:** You need the following permissions:
+>**Requirements** You need the following permissions:
 >- To view audit logs: READ rights for the permission category "Audit"
 
 >**Related topics**:

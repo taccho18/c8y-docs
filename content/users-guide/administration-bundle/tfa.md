@@ -2,6 +2,38 @@
 weight: 61
 title: Two-factor authentication
 ---
+
+### TFA settings
+
+Select the checkbox **Allow two-factor authentication** if you want to allow TFA in your tenant (only possible for administrators).
+
+You may choose one of the following options:
+
+* **SMS-based**, supporting the following settings:
+	- **Limit token validity for**: Lifetime of each session in minutes. When the session expires or a user logs out, the user has to enter a new verification code.
+   - **Limit verification code validity for**: Lifetime of each verification code sent via SMS. When the verification code expires, the user has to request a new verification code in order to login.
+
+	> **Info:** An SMS gateway microservice must be configured for the tenant. Naturally only users with a valid phone number associated can use this functionality.
+
+* **Google Authenticator** (Time-based One-Time Password = TOTP), supporting the following setting:
+	 - **Enforce TOTP two-factor authentication on all users**: When enabled it will force all users to set up their TFA on login. Otherwise each individual user can choose to activate it or not.
+
+> **Info:** The TOTP method is only available with the login mode "OAI-Secure".
+
+Click **Save TFA settings** to apply your settings.
+
+>**Important:** Each time you change the TFA method you will be forced to log out. User TFA settings are cleared and need to be configured again.
+
+>**Info:** Users with a "devices" role are excluded from TFA and TOTP. This is also true when TOTP is enforced for all users.
+
+
+
+
+
+
+
+
+
 The two-factor authentication (TFA) is an extra layer of security that only completes authentication with a combination of two different factors: something the users know (username and password) and something they have (for example, smartphone) or something they are (for example, fingerprint). You can read more on how to configure TFA in the [authentication settings](/users-guide/administration/#authentication) section.
 
 There are two possible TFA strategies: SMS and TOTP. Only one of them can be active at a time.
