@@ -31,7 +31,7 @@ The following information is shown for each device:
 * Creation date
 * Tenant from which the device was registered
 
-The devices may have one of the following status:
+The devices may have one of the following statuses:
 
 * **Waiting for connection** - The device has been registered but no device with the specified ID has tried to connect.
 * **Pending acceptance** - There is communication from a device with the specified ID, but the user doing the registration must still explicitly accept it so that the credentials are sent to the device.
@@ -39,7 +39,7 @@ The devices may have one of the following status:
 
 Devices can be connected to your {{< product-c8y-iot >}} account in different ways.
 
-### To register devices
+### How to register devices
 
 To register devices, you may choose one of the following options:
 
@@ -52,7 +52,7 @@ If you are subscribed to the required applications you will see a third option
 <img src="/images/users-guide/DeviceManagement/devmgmt-register-devices-custom.png" alt="Register devices">
 
 <a name="device-registration-manually"></a>
-#### To connect a  device manually
+#### How to register a device manually
 
 >**Info:** Depending on the type of device you want to connect, not all steps of the following process may be relevant.
 
@@ -79,7 +79,7 @@ Click **Accept** to confirm the connection. The status of the device will change
 > **Info:** In case of any issues, consult the documentation applicable for your device type in the [{{< product-c8y-iot >}} {{< device-portal >}}]({{< link-device-portal >}}) or look up the manual of your device.
 
 <a name="creds-upload"></a>
-#### To bulk-register devices
+#### How to bulk-register devices
 
 To connect larger amounts of devices, {{< product-c8y-iot >}} offers the option to bulk-register devices, that means, to register larger amounts of devices by uploading a CSV file.
 
@@ -104,10 +104,10 @@ Depending on the format of the uploaded CSV file, one of the following registrat
 
 The CSV file contains two columns: ID;PATH, where ID is the device identifier, for example, serial number, and PATH is a slash-separated list of group names (path to the group where the device should be assigned to after registration).
 
-```asciidoc
-    ID;PATH
-    Device1;Group A
-    Device2;Group A/Group B			
+```
+ID;PATH
+Device1;Group A
+Device2;Group A/Group B			
 ```
 
 
@@ -119,15 +119,15 @@ The CSV files must contain at least the IDs as device identifier and the credent
 
 In addition to these columns the file can also contain other columns like ICCID, NAME, TYPE as shown in this example.
 
-```asciidoc
-    ID;Credentials;PATH;ICCID;NAME;TYPE
-    006064ce800a;LF2PWJoLG1Fz;Sample_Düsseldorf;+491555555;Sample_Device1;c8y_Device
-    006064ce8077;OowoGKAbiNJs;Sample_Düsseldorf;+491555555;Sample_Device2;c8y_Device		
+```
+ID;Credentials;PATH;ICCID;NAME;TYPE
+006064ce800a;LF2PWJoLG1Fz;Sample_Düsseldorf;+491555555;Sample_Device1;c8y_Device
+006064ce8077;OowoGKAbiNJs;Sample_Düsseldorf;+491555555;Sample_Device2;c8y_Device
 ```
 
-To connect the devices, they are pre-registered with the relevant information. More specific, each device will be configured as follows:
+To connect the devices, they are pre-registered with the relevant information. More specifically, each device will be configured as follows:
 
-* Username - the username for accessing {{< product-c8y-iot >}} must have the format &lt;tenant&gt;/device_&lt;id&gt;, where &lt;tenant&gt; refers to the tenant from which the CSV file is imported and &lt;id&gt; refers to the respective value in the CSV file.
+* Username - the username for accessing {{< product-c8y-iot >}} must have the format `<tenant>/device_<id>`, where `<tenant>` refers to the tenant from which the CSV file is imported and `<id>` refers to the respective value in the CSV file.
 * Password - the password to access {{< product-c8y-iot >}}, equals the value "Credentials" in the CSV file.
 * Device in managed object representation - fields TYPE, NAME, ICCID, IDTYPE, PATH, SHELL in the CSV file.
 
@@ -137,7 +137,7 @@ For your convenience, we provide CSV template files for both bulk registration t
 
 >**Info:** If the device with the given identifier already exists, it will be updated with the data from the CSV file.
 
-##### To import CSV data in Microsoft Excel
+##### How to import CSV data in Microsoft Excel
 
 1. In Microsoft Excel, switch to the **Data** tab.
 2. In the **Data** tab, select **From Text** in the top menu bar.
@@ -145,7 +145,11 @@ For your convenience, we provide CSV template files for both bulk registration t
 4. In Step 1 of the **Text Import Wizard**, leave the default settings and click **Next**.
 5. In Step 2 of the **Text Import Wizard**, select **Semicolon** as delimiter and click **Finish**.
 
-For further information on the file format and accepted CSV variants, also refer to
+For further information on the file format and accepted CSV variants, refer to
 [Create a bulk device credentials request](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#operation/postBulkNewDeviceRequestCollectionResource) in the {{< openapi >}}.
 
 >**Info:** In an {{< enterprise-tenant >}} you may also register devices across multiple tenants by adding a **Tenant** column to the spreadsheet and importing the CSV file from the {{< management-tenant >}}.
+
+### Related topics
+
+* See [Device integration tutorials](../../device-tutorials/tutorials-introduction) for information on the integration of specific devices
