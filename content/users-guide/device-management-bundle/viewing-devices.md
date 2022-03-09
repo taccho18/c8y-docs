@@ -11,6 +11,19 @@ helpcontent:
     You may filter the list by clicking the filter icon next to any column and providing filter options. For a full-text search, click the **Search** button at the top right and enter a search term."
 ---
 
+{{< c8y-admon-req >}}
+* A tenant and your tenant credentials.
+* A stable internet connection and a successful login.
+{{< /c8y-admon-req >}}
+
+{{< c8y-admon-howto >}}
+* [How to show/hide standard columns](#how-to-showhide-standard-columns)
+* [How to add custom columns](#how-to-add-custom-columns)
+* [How to delete a device from the list](#how-to-delete-a-device-from-the-list)
+* [How to search for devices](#how-to-search-for-devices)
+* [How to filter devices](#how-to-filter-devices)
+{{< /c8y-admon-howto >}}
+
 To view all devices connected to your account, click **All devices** in the **Devices** menu in the navigator.
 
 A detailed device list will be displayed.
@@ -80,7 +93,7 @@ The devices list displays up to 100 rows. If a list contains more than 100 devic
 
 The columns shown in the device list may be configured to your needs.
 
-#### To show/hide standard columns
+#### How to show/hide standard columns
 
 1. In the top menu bar, click **Configure columns**.
 2. In the resulting dialog box, select/clear the checkboxes for all columns as required. <br>![Configure columns](/images/users-guide/DeviceManagement/devmgmt-device-list-configure-columns.png)
@@ -89,7 +102,7 @@ The columns shown in the device list may be configured to your needs.
 
 The device list will reflect your changes and only show the selected columns.
 
-#### To add custom columns
+#### How to add custom columns
 
 Moreover, you can add custom columns to show additional device properties.
 
@@ -107,7 +120,7 @@ The new column will be added and displayed in the device list.
 
 > **Info:** While standard columns can only be shown/hidden as required, custom columns may be deleted permanently.
 
-#### To delete a device from the list
+#### How to delete a device from the list
 
 1. Hover over the row of the device you want to delete.
 2. Click the delete icon at the right of the row.
@@ -117,7 +130,7 @@ The device will be permanently deleted from the platform.
 > **Important:** Deleting a device means to remove the device from the {{< product-c8y-iot >}} database including all its generated data. Alternatively, you can arrange all retired devices in one group, see [Grouping devices](#grouping-devices)). This ensures that all reports remain correct. To prevent alarms from being raised for the retired devices, disable [connection monitoring](#connection-monitoring). Deleting a device does not delete the data of its child devices.
 
 <a name="searching-devices"></a>
-### To search for devices
+### How to search for devices
 
 {{< product-c8y-iot >}} includes a full-text search for devices.
 
@@ -130,7 +143,7 @@ Our example shows a search for "NTC".
 ![Search for devices](/images/users-guide/DeviceManagement/devmgmt-search.png)
 
 <a name="filtering-devices"></a>
-### To filter devices
+### How to filter devices
 
 The device list offers a filtering functionality to filter devices in the list for specific criteria.
 
@@ -157,3 +170,7 @@ The devices list will now only display devices matching the filtering options.
 Click **Clear filters** at the left of the top menu bar if you want to clear all filters and view all devices.
 
 >**Info:** If you select to sort a text field, for example, device name, in ascending or descending order, keep in mind that the resulting alphabetical sorting is based on ASCII/UTF: A < B < ... < Z < ... < a < b ... < z. Names starting with lower case letters will be sorted below all names with uppercase letters or vice versa.
+
+{{< c8y-admon-related >}}
+* See the [device control API](https://cumulocity.com/api/{{< c8y-current-version >}}/#tag/Device-control-API) for REST API methods concerning device management
+{{< /c8y-admon-related >}}

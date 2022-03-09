@@ -16,8 +16,19 @@ helpcontent:
     * **Accepted** - the user has allowed the credentials to be send to the device"
 ---
 
-<a name="dev-registration"></a>
+{{< c8y-admon-req >}}
+* A tenant and your tenant credentials.
+* A stable internet connection and a successful login.
+{{< /c8y-admon-req >}}
 
+{{< c8y-admon-howto >}}
+* [How to register devices](#how-to-register-devices)
+* [How to register a device manually](#how-to-register-a-device-manually)
+* [How to bulk-register devices](#how-to-bulk-register-devices)
+* [How to import CSV data in Microsoft Excel](#how-to-import-csv-data-in-microsoft-excel)
+{{< /c8y-admon-howto >}}
+
+<a name="dev-registration"></a>
 ### Device registration
 
 In the **Device registration** page all devices which currently are in the registration process are displayed either in a list or in a grid.
@@ -150,6 +161,8 @@ For further information on the file format and accepted CSV variants, refer to
 
 >**Info:** In an {{< enterprise-tenant >}} you may also register devices across multiple tenants by adding a **Tenant** column to the spreadsheet and importing the CSV file from the {{< management-tenant >}}.
 
-### Related topics
-
+{{< c8y-admon-related >}}
 * See [Device integration tutorials](../../device-tutorials/tutorials-introduction) for information on the integration of specific devices
+* See the [Device SDK guide](../../device-sdk/introduction/) for information on device integration via REST and C++
+* See the [device control API](https://cumulocity.com/api/{{< c8y-current-version >}}/#tag/Device-control-API) for REST API methods concerning device management
+{{< /c8y-admon-related >}}
