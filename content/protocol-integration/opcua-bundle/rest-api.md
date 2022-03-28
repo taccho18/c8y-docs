@@ -216,7 +216,7 @@ The Spring Expression Language(SpEL) has been used to parse these conditions, bu
 See the **alarmStatusMappings example** below the table.
 
 >**Info:** There are three alarm statuses in {{< product-c8y-iot >}}, namely ACTIVE, ACKNOWLEDGED, and CLEARED. If the user-defined conditions overlap and as a result more than one alarm status is realized during the alarm creation,
-> then the status is chosen based on priority. ACTIVE has the highest priority, followed by ACKNOWLEDGED and then CLEARED status with the least priority. If the expression could not be evaluated then the gateway logs a warning and
+> then the status is selected based on priority. ACTIVE has the highest priority, followed by ACKNOWLEDGED and then CLEARED status with the least priority. If the expression could not be evaluated then the gateway logs a warning and
 > the alarm status is assumed as ACTIVE. The alarm status is also assumed as ACTIVE, if the default status is not specified, and the parameters do not match any other defined condition.
 
 </td>
@@ -227,7 +227,7 @@ See the **alarmStatusMappings example** below the table.
 <td>no</td>
 <td>The subscription to model change event can be enabled/disabled using this property. Default value is "false" (disabled),
 which means any change in the address space nodes of the OPC UA server in runtime will not automatically be updated in the address space of {{< product-c8y-iot >}}.
-This property has to be explicitly set to "true" to detect and persist the address space changes on runtime. </td>
+This property must be explicitly set to "true" to detect and persist the address space changes on runtime. </td>
 </tr>
 
 </tbody>
@@ -790,10 +790,10 @@ Full payload data structure explained:
 
 <table>
 <colgroup>
-<col style="width: 20%;">
+<col style="width: 25%;">
 <col style="width: 20%;">
 <col style="width: 10%;">
-<col style="width: 50%;">
+<col style="width: 45%;">
 </colgroup>
 <thead>
 <tr>

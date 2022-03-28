@@ -99,7 +99,7 @@ client.on("message", function (topic, message) {
 
 Replace `serverUrl`, `clientId` and `device_name` as needed. Do not forget to specify the user credentials setting values for `tenant_ID`, `username` and `password`.
 
-The {{< product-c8y-iot >}} MQTT protocol supports both unsecured TCP and secured SSL connections. No matter which connection type you choose, your `serverUrl` should stay the same (like `mqtt.{{< domain-c8y >}}`).
+The {{< product-c8y-iot >}} MQTT protocol supports both unsecured TCP and secured SSL connections. No matter which connection type you select, your `serverUrl` should stay the same (like `mqtt.{{< domain-c8y >}}`).
 
 What does the code do?
 
@@ -121,7 +121,7 @@ Before running the application, the MQTT middleware must be installed. To achiev
 $ npm install
 ```
 
-Installation has to be done only once. Afterwards, you only need to execute the following command:
+Installation needs to be done only once. Afterwards, you only need to execute the following command:
 
 ```shell
 $ npm start
