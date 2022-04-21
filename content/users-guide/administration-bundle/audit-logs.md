@@ -11,8 +11,9 @@ helpcontent:
 
 Audit logs show security-relevant operations a user has processed. For example, an audit log is generated when a user logs into a gateway.
 
->**Requirements** You need the following permissions:
->- To view audit logs: READ rights for the permission category "Audit"
+>**Requirements** ROLES & PERMISSIONS:
+>- To see the **Audit logs** page and view audit logs: Permission type "Audits" with permission level READ
+ - To manage audit logs (create, update, delete): Permission type "Audits" with permission level ADMIN
 
 >**Related topics**:
 >- For details on managing audit records via REST, see [Audits](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Audits) in the {{< openapi >}}.

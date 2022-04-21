@@ -122,9 +122,9 @@ With custom properties, you can extend the data model of {{< product-c8y-iot >}}
 
 SMS are used throughout the platform for various features like [two-factor authentication](/users-guide/administration#tfa) and user notifications, for example, on alarms. By providing your credentials you enable platform features that utilize SMS services.
 
->**Requirements** You need the following permissions:
-- To see the **SMS provider** page: READ rights for the permission category "SMS"
-- To modify the **SMS provider** configuration: ADMIN rights for the permission category "SMS"
+>**Requirements** ROLES & PERMISSIONS:
+- To see the **SMS provider** page: Permission type "SMS" with permission level READ
+- To modify the **SMS provider** configuration: Permission type "SMS" with permission level ADMIN
 
 #### To enter SMS provider credentials
 
@@ -144,7 +144,11 @@ SMS are used throughout the platform for various features like [two-factor authe
 <a name="connectivity"></a>
 ### Connectivity
 
-In the **Connectivity** page, you can manage credentials for different providers. In order to add or replace credentials ADMIN permissions are required.
+In the **Connectivity** page, you can manage credentials for different providers.
+
+>**Requirements** ROLES & PERMISSIONS:
+- To see the **Connectivity** page: Global role "readers" or "admins"
+- To add or replace credentials: Global role "admins"
 
 The following provider settings may be specified:
 

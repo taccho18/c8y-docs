@@ -20,9 +20,10 @@ Retention rules give you control on how long data is stored in your account. By 
 
 >**Info:** Retention rules are usually run during the night. When you edit a retention rule, you will not see an immediate effect in the **Usage** section on the **Home** screen of the Administration application.
 
->**Requirements** You need the following permissions:
-- To manage retention rules: ADMIN rights for the permission category "Retention rules"
-- To view retention rules: READ rights for the permission category "Retention rules".
+>**ROLES & PERMISSIONS:
+- To see the **Retention rules** page and view retention rules: Permission level READ for permission type "Retention rules"
+- To manage retention rules (create, update, delete): Permission level ADMIN for permission type "Retention rules"
+
 
 >**Related topics**:
 >- For details on managing retention rules via REST, see [Retention](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Retention) in the {{< openapi >}}.
@@ -88,6 +89,11 @@ The retention process removes the measurements with the type `c8y_Temperature` w
 ### Managing files in the file repository
 
 The file repository provides an overview of the files stored in your account.
+
+>**Requirements** ROLES & PERMISSIONS:
+- To see the **Files repository** page and view the files: global role "readers" or "admins"
+- To manage files in the files repository (upload, download, and delete): global role "admins"
+
 
 #### To view files
 

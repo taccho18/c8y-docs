@@ -21,10 +21,10 @@ helpcontent:
 
 The user management feature allows you to manage the users within your tenant, that is create users, store user details, or configure login and security options.
 
->**Requirements** You need the following permissions:
->- To view users: READ rights for the permission category "User management"
->- To create users: CREATE rights for the permission category "User management"
->- To manage users (edit, delete, copy inventory roles, enable/disable): ADMIN rights for the permission category "User management"
+>**Requirements** ROLES & PERMISSIONS:
+>- To view users: Permission type "User management" with permission level READ
+>- To create users: Permission type "User management" with permission level CREATE
+>- To manage users (edit, delete, copy inventory roles, enable/disable): Permission type "User management" with permission level ADMIN
 
 > **Info:** If your tenant is configured for using single sign-on (SSO) in {{< sag-cloud >}}, new users should be created under **My Cloud**, accessible through the application switcher in the upper right corner, so that they are able to use the single sign-on feature.
 <br>

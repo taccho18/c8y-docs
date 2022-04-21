@@ -36,10 +36,12 @@ The following types of roles can be associated with users:
 
 Moreover, application access can be granted to enable a user to use an application.
 
->**Requirements** You need the following permissions:
->- To view global roles: READ or CREATE rights for the permission category "User management"
->- To create a new global role: ADMIN rights for the permission category "User management"
->- To assign global roles to users: ADMIN rights for the permission category "User management"
+>**Requirements** ROLES & PERMISSIONS:
+>- To view all global roles: Permission type "User management" with permission level READ or CREATE
+>- To manage global roles (assign/unassign to users): Permission type "User management" with permission level ADMIN
+>- To view all inventory roles: Permission type "User management" with permission level READ or CREATE
+>- To manage inventory roles (create, update, delete): Permission type "User management" with permission level ADMIN
+
 
 >**Related topics**:
 >- [Managing users](#managing-users).

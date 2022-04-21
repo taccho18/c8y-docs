@@ -16,11 +16,17 @@ helpcontent:
     Click on a microservice to view the application properties."
 ---
 
-Click **Microservices** in the **Ecosystem** menu in the navigator to display a list or grid of all  microservices subscribed to your account.
-
-<img src="/images/users-guide/Administration/admin-microservices.png" alt="Microservices list">
-
 A microservice is a specific type of application, that is a server-side application used to develop further functionality on top of {{< product-c8y-iot >}}. As web applications, microservices can either be subscribed to your tenant by the platform or by a service provider, or they can be owned by you as custom applications, see [Custom microservices](#custom-microservices).
+
+>**Requirements** ROLES & PERMISSIONS:
+>- To view applications and microservices: Permission type "Application management" with permission level READ
+ - To manage applications and microservices (create, update, copy): Permission type "Application management" with permission level ADMIN
+ - To delete an application or a microservice: Permission type "Application management" with permission level ADMIN AND tenant is the owner of the application
+
+ Click **Microservices** in the **Ecosystem** menu in the navigator to display a list or grid of all microservices subscribed to your account.
+
+ <img src="/images/users-guide/Administration/admin-microservices.png" alt="Microservices list">
+
 
 ### Subscribed microservices
 

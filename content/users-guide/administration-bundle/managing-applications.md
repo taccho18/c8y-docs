@@ -30,8 +30,17 @@ Additionally, in {{< enterprise-tenant >}}s, it is possible to configure **Defau
 
 <img src="/images/users-guide/Administration/admin-menu.png" alt="Applications menu">
 
+
+
 <a name="applications"></a>
 ### Applications
+
+Applications refer to all web applications either subscribed to the tenant or owned by the tenant.
+
+>**Requirements** ROLES & PERMISSIONS:
+>- To view applications and microservices: Permission type "Application management" with permission level READ
+ - To manage applications and microservices (create, update, copy): Permission type "Application management" with permission level ADMIN
+ - To delete an application or a microservice: Permission type "Application management" with permission level ADMIN AND tenant is the owner of the application
 
 Click **Applications** in the **Ecosystem** menu in the navigator to display a list or grid of all applications in your account.
 
