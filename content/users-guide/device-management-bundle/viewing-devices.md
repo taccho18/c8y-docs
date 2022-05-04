@@ -11,6 +11,19 @@ helpcontent:
     You can filter the list by clicking the filter icon next to any column and providing filter options. For a full-text search, click the **Search** button at the top right and enter a search term."
 ---
 
+{{< c8y-admon-req >}}
+* A tenant and your tenant credentials.
+* A stable internet connection and a successful login.
+{{< /c8y-admon-req >}}
+
+{{< c8y-admon-howto >}}
+* [To show/hide standard columns](#to-showhide-standard-columns)
+* [To add custom columns](#to-add-custom-columns)
+* [To delete a device from the list](#to-delete-a-device-from-the-list)
+* [To search for devices](#to-search-for-devices)
+* [To filter devices](#to-filter-devices)
+{{< /c8y-admon-howto >}}
+
 To view all devices connected to your account, click **All devices** in the **Devices** menu in the navigator.
 
 A detailed device list will be displayed.
@@ -157,3 +170,7 @@ The devices list will now only display devices matching the filtering options.
 Click **Clear filters** at the left of the top menu bar if you want to clear all filters and view all devices.
 
 >**Info:** If you select to sort a text field, for example, device name, in ascending or descending order, keep in mind that the resulting alphabetical sorting is based on ASCII/UTF: A < B < ... < Z < ... < a < b ... < z. Names starting with lower case letters will be sorted below all names with uppercase letters or vice versa.
+
+{{< c8y-admon-related >}}
+* See the [device control API](https://cumulocity.com/api/{{< c8y-current-version >}}/#tag/Device-control-API) for REST API methods concerning device management
+{{< /c8y-admon-related >}}

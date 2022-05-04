@@ -18,8 +18,19 @@ helpcontent:
     **Accepted** - the user has allowed the credentials to be send to the device"
 ---
 
-<a name="dev-registration"></a>
+{{< c8y-admon-req >}}
+* A tenant and your tenant credentials.
+* A stable internet connection and a successful login.
+{{< /c8y-admon-req >}}
 
+{{< c8y-admon-howto >}}
+* [To register devices](#to-register-devices)
+* [To connect a device manually](#to-connect-a--device-manually)
+* [To bulk-register devices](#to-bulk-register-devices)
+* [To import CSV data in Microsoft Excel](#to-import-csv-data-in-microsoft-excel)
+{{< /c8y-admon-howto >}}
+
+<a name="dev-registration"></a>
 ### Device registration
 
 In the **Device registration** page all devices which currently are in the registration process are displayed either in a list or in a grid.
@@ -42,6 +53,10 @@ The devices may have one of the following status:
 Devices can be connected to your {{< product-c8y-iot >}} account in different ways.
 
 ### To register devices
+
+{{< c8y-admon-req >}}
+This is a requirements admonition.
+{{< /c8y-admon-req >}}
 
 To register devices, you can select one of the following options:
 
@@ -151,3 +166,9 @@ For further information on the file format and accepted CSV variants, also refer
 [Create a bulk device credentials request](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#operation/postBulkNewDeviceRequestCollectionResource) in the {{< openapi >}}.
 
 >**Info:** In an {{< enterprise-tenant >}} you may also register devices across multiple tenants by adding a **Tenant** column to the spreadsheet and importing the CSV file from the {{< management-tenant >}}.
+
+{{< c8y-admon-related >}}
+* See [Device integration tutorials](../../device-tutorials/tutorials-introduction) for information on the integration of specific devices
+* See the [Device SDK guide](../../device-sdk/introduction/) for information on device integration via REST and C++
+* See the [device control API](https://cumulocity.com/api/{{< c8y-current-version >}}/#tag/Device-control-API) for REST API methods concerning device management
+{{< /c8y-admon-related >}}
