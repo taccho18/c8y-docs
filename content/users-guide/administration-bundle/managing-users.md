@@ -10,15 +10,22 @@ helpcontent:
     Moreover you can select the global roles for a user, see also *Administration > Managing permissions* in the *User guide*."
 ---
 
-The user management feature allows you to manage the users within your tenant. With this functionality you may:
+The **user management feature** allows you to manage the users within your tenant, that is create users, store user details, or configure login and security options.
 
-- Create users.
-- Assign usernames and set passwords.
-- Store user details.
-- Specify login options.
-- Enable additional login security by using Two-Factor Authentication (TFA).
+{{< c8y-admon-req >}}
+ROLES & PERMISSIONS:
+- To view users: READ permission for the permission type "User management"
+- To create users: CREATE permission for permission type "User management"
+- To manage users (edit, delete, copy inventory roles, enable/disable): ADMIN permission for permission type "User management"
+{{< /c8y-admon-req >}}
 
-> **Info:** The user needs to have a role with the user management permission ADMIN or CREATE to be able to do so.
+{{< c8y-admon-related >}}
+- [Managing permissions](#managing-permissions).
+- [Managing user hierarchies](/users-guide/enterprise-tenant/#user-hierarchies).
+- [Two-factor authentication](/users-guide/administration/#tfa).
+- For managing users via REST, see [Users](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Users) in the {{< openapi >}}.
+{{< /c8y-admon-related >}}
+
 
 If your tenant is configured for using single sign-on (SSO) in {{< sag-cloud >}}, new users should be created under **My Cloud**, accessible through the application switcher in the upper right corner, so that they are able to use the single sign-on feature.
 
@@ -32,8 +39,8 @@ Moreover, password reset in {{< product-c8y-iot >}} is disabled for users create
 
 > **Info:** Users which are using single sign-on cannot change the password of users which are managed by the platform.
 
-
-### Viewing users
+<a name="view-users"></a>
+### To view users
 
 To view all users in your tenant, click **Users** in the **Account** menu in the navigator.
 

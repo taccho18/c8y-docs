@@ -13,9 +13,24 @@ helpcontent:
 <a name="retention-rules"></a>
 ### Retention rules
 
-Retention rules gives you control on how long data is stored in your account. By default, all historical data is deleted after 60 days (configurable in the system settings).
+**Retention rules** give you control on how long data is stored in your account. By default, all historical data is deleted after 60 days (configurable in the system settings by the platform administrator). You might however want to store measurements for 90 days for example, but delete alarms already after 10 days.
 
-You might however want to store measurements for 90 days for example, but delete alarms already after 10 days.
+{{< c8y-admon-req >}}
+ROLES & PERMISSIONS:
+- To view retention rules: Permission level READ for permission type "Retention rules"
+- To manage retention rules (create, update, delete): Permission level ADMIN for permission type "Retention rules"
+{{< /c8y-admon-req >}}
+
+{{< c8y-admon-related >}}
+For details on managing retention rules via REST, see [Retention](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Retention) in the {{< openapi >}}.
+{{< /c8y-admon-related >}}
+
+ {{< c8y-admon-info >}}
+Retention rules are usually run during the night. When you edit a retention rule, you will not see an immediate effect in the **Usage** section on the **Home** screen of the Administration application.
+{{< /c8y-admon-info >}}
+
+<a name="view-retention-rule"></a>
+#### To view retention rules
 
 Retention rules are usually run during the night. When you edit a retention rule, you will not see an immediate effect in the **Usage** section on the **Home** screen of the Administration application.
 

@@ -10,7 +10,20 @@ helpcontent:
       In order to easily search through logs, specify filter criteria in the top bar for type, date range or user and apply them."
 ---
 
-Audit logs show the operations that users have carried out.
+**Audit logs** show security-relevant operations a user has processed. For example, an audit log is generated when a user logs into a gateway.
+
+{{< c8y-admon-req >}}
+ROLES & PERMISSIONS:
+- To view audit logs: READ permission for the permission type "Audits"
+ - To manage audit logs (create, update, delete): ADMIN permission for the permission type "Audits"
+{{< /c8y-admon-req >}}
+
+{{< c8y-admon-related >}}
+For details on managing audit records via REST, see [Audits](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Audits) in the {{< openapi >}}.
+{{< /c8y-admon-related >}}
+
+
+### To view audit logs
 
 To view the audit log list, click **Audit logs** in the **Accounts** menu. For each log entry, the following information is provided:
 
