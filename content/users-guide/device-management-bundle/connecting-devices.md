@@ -54,8 +54,28 @@ Devices can be connected to your {{< product-c8y-iot >}} account in different wa
 
 ### To register devices
 
+{{< c8y-admon-req title="API requirements" >}}
+* ROLE_DEVICE_BOOTSTRAP
+*  ROLE_IDENTITY_READ OR owner of the resource OR MANAGED_OBJECT_READ permission on the resource
+*  ROLE_INVENTORY_ADMIN OR ROLE_INVENTORY_CREATE
+*  ROLE_IDENTITY_ADMIN OR owner of the resource OR MANAGED_OBJECT_ADMIN permission on the resource
+*  ROLE_INVENTORY_ADMIN OR owner of the source OR MANAGE_OBJECT_ADMIN permission on the source
+* ROLE_INVENTORY_ADMIN OR ((owner of the source OR MANAGE_OBJECT_ADMIN permission on the source) AND (owner of the child OR MANAGE_OBJECT_ADMIN permission on the child))
+* ROLE_DEVICE_CONTROL_READ
+* ROLE_DEVICE_CONTROL_READ
+* ROLE_MEASUREMENT_ADMIN OR owner of the source OR MEASUREMENT_ADMIN permission on the source
+* ROLE_EVENT_ADMIN OR owner of the source OR EVENT_ADMIN permission on the source
+* ROLE_ALARM_ADMIN OR owner of the source OR ALARM_ADMIN permission on the source
+{{< /c8y-admon-req >}}
+
 {{< c8y-admon-req >}}
-This is a requirements admonition.
+* ADMIN Device control permission
+* READ Identity permission
+* CREATE Inventory permission
+* READ Device control permission
+* ADMIN Measurement permission
+* ADMIN Events permission
+* ADMIN Alars permission
 {{< /c8y-admon-req >}}
 
 To register devices, you can select one of the following options:
