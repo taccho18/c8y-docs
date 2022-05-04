@@ -23,6 +23,22 @@ The following types of roles can be associated with users:
 
 Moreover, application access can be granted to enable a user to use an application.
 
+{{< c8y-admon-req >}}
+ROLES & PERMISSIONS:
+- To view all global roles: READ or CREATE permission for permission type "User management"
+- To manage global roles (assign/unassign to users): ADMIN permission for permission type "User management"
+- To view all inventory roles: READ or CREATE permission for permission type "User management"
+- To manage inventory roles (create, update, delete): ADMIN permission for permission type "User management"
+{{< /c8y-admon-req >}}
+
+{{< c8y-admon-related >}}
+- [Managing users](#managing-users).
+- [Managing applications](#managing-applications).
+- For managing permissions via REST, see [Roles](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Roles) and [Inventory Roles](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Inventory-Roles) in the {{< openapi >}}.
+- For further information on fragment types, see the {{< product-c8y-iot >}} [sensor library](/reference/sensor-library/) or [device management library](/reference/device-management-library/).
+{{< /c8y-admon-related >}}
+
+
 <a name="global"></a>
 ### Global roles
 

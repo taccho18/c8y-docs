@@ -15,11 +15,10 @@ helpcontent:
 {{< c8y-admon-req >}}
 ROLES & PERMISSIONS:
 - To view audit logs: READ permission for the permission type "Audits"
- - To manage audit logs (create, update, delete): ADMIN permission for the permission type "Audits"
 {{< /c8y-admon-req >}}
 
 {{< c8y-admon-related >}}
-For details on managing audit records via REST, see [Audits](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Audits) in the {{< openapi >}}.
+[Audits](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Audits) in the {{< openapi >}} for details on managing audit records via REST.
 {{< /c8y-admon-related >}}
 
 

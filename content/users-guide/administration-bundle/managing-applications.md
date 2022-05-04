@@ -9,20 +9,27 @@ helpcontent:
 
 
     **Subscribed applications** - Applications subscribed to the tenant, either provided by the platform or a service provider. Cumulocity IoT provides a variety of applications for different purposes. Find a list of all applications in the *User guide*.
-    
+
     **Custom applications** - Applications owned by the tenant. You can add custom applications in various ways as own applications.
 
 
     Click on an application to view the application properties. To add an application, click **Add application** and follow the instructions in the wizard, see also the *User guide*."
 ---
 
-The {{< product-c8y-iot >}} platform distinguishes between applications and microservices, see also [Developing applications](concepts/applications/#overview) in the *Concepts guide*..
+The {{< product-c8y-iot >}} platform distinguishes between applications and microservices, see also [Developing applications](concepts/applications/#overview) in the *Concepts guide*.
 
 * [Applications](#applications) -  all web applications either subscribed to the tenant or owned by the tenant.
 
 * [Microservices](#managing-microservices) - server-side applications used to develop further functionality on top of {{< product-c8y-iot >}}.
 
 Both can be accessed via the **Ecosystem** menu in the navigator.
+
+{{< c8y-admon-req >}}
+ROLES & PERMISSIONS:
+- To view applications and microservices: READ permission for permission type "Application management"
+- To manage applications and microservices (create, update, copy): ADMIN permission for permission type "Application management"
+- To delete an application or a microservice: ADMIN permission for permission type "Application management" AND tenant is the owner of the application
+{{< /c8y-admon-req >}}
 
 Additionally, in {{< enterprise-tenant >}}s, it is possible to configure **Default subscriptions**, that means you can specify a list of applications that are subscribed by default to every new tenant on creation and/or to all existing tenants on platform upgrade. For details, see [Enterprise tenant > Default subscriptions](/users-guide/enterprise-tenant/#default-subscriptions).
 

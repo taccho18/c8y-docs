@@ -22,7 +22,7 @@ ROLES & PERMISSIONS:
 {{< /c8y-admon-req >}}
 
 {{< c8y-admon-related >}}
-For details on managing retention rules via REST, see [Retention](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Retention) in the {{< openapi >}}.
+[Retention](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Retention) in the {{< openapi >}} for details on managing retention rules via REST.
 {{< /c8y-admon-related >}}
 
  {{< c8y-admon-info >}}
@@ -92,6 +92,12 @@ Hover over the rule you want to delete and click the delete icon at the right.
 ### Managing files in the file repository
 
 The file repository provides an overview of the files stored in your account.
+
+{{< c8y-admon-req >}}
+ROLES & PERMISSIONS:
+- To view the files in the files repository: global role "readers" or "admins"
+- To manage files in the files repository (upload, download, and delete): global role "admins"
+{{< /c8y-admon-req >}}
 
 Click **Files repository** in the **Management** menu to see a list of files.
 
