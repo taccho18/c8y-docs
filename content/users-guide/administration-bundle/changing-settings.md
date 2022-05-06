@@ -37,7 +37,16 @@ Click **Authentication** in the **Settings** menu if you want to view or change 
 
 ![Password settings](/images/users-guide/Administration/admin-settings-authentication.png)
 
->**Info:** To see the **Authentication** menu entry, you must have "Tenant management" ADMIN permission (`ROLE_TENANT_ADMIN` or `ROLE_TENANT_MANAGEMENT_ADMIN`).
+{{< c8y-admon-req >}}
+ROLES & PERMISSIONS:
+- To see the **Authentication** menu entry and configure authentication settings: ADMIN permission for the permission type "Tenant management"
+{{< /c8y-admon-req >}}
+
+{{< c8y-admon-related >}}
+- [Single sign-on](#configuring-single-sign-on) for details on how to configure single sign-on.
+- [Two-factor authentication](/users-guide/administration/tfa) for details on how to configure two-factor authentication.
+- [Authentication](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Authentication) in the {{< openapi >}} for details on handling authentication via REST.
+{{< /c8y-admon-related >}}
 
 #### Login settings
 
@@ -130,13 +139,13 @@ If the **Use session configuration** option is enabled, the following settings c
 
 >**Info:** The time parameters should depend on each other in the following manner: renewal timeout < token lifespan < absolute timeout.
 > Moreover, the renewal timeout should be approximately half of the token lifespan.      
-> 
+>
 > Therefore, the recommended settings for a standard use case for OAI-Secure are the following:   
-> 
+>
 > * **Session absolute timeout**: 28 800 seconds (8 hours)        
 > * **Session renewal timeout**: 2700 seconds (45 minutes)        
 > * **Token lifespan**: 5400 seconds (90 minutes)
-> 
+>
 >  In such configurations, the idle timeout is in the range of 45 to 90 minutes, depending on when the last activity for the session was performed.
 
 During the session token renewal the previous token is revoked and a new one is provided. The parameter `renewal token delay` defines the delay used to make this process smooth and not disturbing for the user. The old token is still valid for this period (1 minute by default). This way both tokens, old and new, are accepted by {{< product-c8y-iot >}}. This parameter is only configurable on platform level and cannot be modified by the tenant administrator.
@@ -514,13 +523,17 @@ SMS are used throughout the platform for various features like [two-factor authe
 
 By providing your credentials you enable platform features that utilize SMS services.
 
+{{< c8y-admon-req >}}
+ROLES & PERMISSIONS:
+- To view SMS provider credentials: READ permission for the permission type "SMS"
+- To modify SMS provider credentials: ADMIN permission for the permission type "SMS"
+{{< /c8y-admon-req >}}
+
 #### To enter SMS provider credentials
 
 1. Click **SMS provider** in the **Settings** menu.
 
     ![Select SMS provider](/images/users-guide/Administration/admin-settings-sms-provider.png)
-
-	>**Info:** To see the SMS provider configuration, you must have the permission SMS READ. To modify the SMS provider configuration, you must have the permission SMS ADMIN.
 
 2. In the **SMS provider** page, select one of the available SMS providers from the **SMS provider** dropdown field. You can start typing to filter items and more easily find your preferred provider.
 
@@ -528,13 +541,23 @@ By providing your credentials you enable platform features that utilize SMS serv
 
 4. Click **Save** to save your settings.
 
->**Info:** OpenIT does not serve new customers anymore and is in the process of shutting down their SMS provider business. We therefore recommend you to select one of the other SMS providers.
+{{< c8y-admon-warning >}}
+OpenIT does not serve new customers anymore and is in the process of shutting down their SMS provider business. We therefore recommend you to select one of the other SMS providers.
+{{< /c8y-admon-warning >}}
 
 
 <a name="connectivity"></a>
 ### Managing the connectivity settings
 
-In the **Connectivity** page, you can manage credentials for different providers. In order to add or replace credentials ADMIN permissions are required.
+In the **Connectivity** page, you can manage credentials for different providers.
+
+{{< c8y-admon-req >}}
+ROLES & PERMISSIONS:
+- To view connectivity credentials: READ permission for the permission type "???"
+- To manage connectivity credentials (add, edit, delete): ADMIN permission for the permission type "???"
+{{< /c8y-admon-req >}}
+
+In order to add or replace credentials ADMIN permissions are required.
 
 The following provider settings may currently be specified:
 
