@@ -18,17 +18,11 @@ helpcontent:
     **Accepted** - the user has allowed the credentials to be send to the device"
 ---
 
-{{< c8y-admon-req >}}
-* A tenant and your tenant credentials.
-* A stable internet connection and a successful login.
-{{< /c8y-admon-req >}}
-
-{{< c8y-admon-howto >}}
-* [To register devices](#to-register-devices)
-* [To connect a device manually](#to-connect-a--device-manually)
-* [To bulk-register devices](#to-bulk-register-devices)
-* [To import CSV data in Microsoft Excel](#to-import-csv-data-in-microsoft-excel)
-{{< /c8y-admon-howto >}}
+{{< c8y-admon-related >}}
+* See [Device integration tutorials](../../device-tutorials/tutorials-introduction) for information on the integration of specific devices
+* See the [Device SDK guide](../../device-sdk/introduction/) for information on device integration via REST and C++
+* See the [device control API](https://cumulocity.com/api/{{< c8y-current-version >}}/#tag/Device-control-API) for REST API methods concerning device management
+{{< /c8y-admon-related >}}
 
 <a name="dev-registration"></a>
 ### Device registration
@@ -72,7 +66,7 @@ Devices can be connected to your {{< product-c8y-iot >}} account in different wa
 * ADMIN Device control permission
 * READ Identity permission
 * CREATE Inventory permission
-* READ Device control permission
+* (READ Device control permission)
 * ADMIN Measurement permission
 * ADMIN Events permission
 * ADMIN Alars permission
@@ -91,7 +85,13 @@ If you are subscribed to the required applications you will see a third option
 <a name="device-registration-manually"></a>
 #### To connect a  device manually
 
->**Info:** Depending on the type of device you want to connect, not all steps of the following process may be relevant.
+{{< c8y-admon-req >}}
+* Stub
+{{< /c8y-admon-req >}}
+
+{{< c8y-admon-info >}}
+Depending on the type of device you want to connect, not all steps of the following process may be relevant.
+{{< /c8y-admon-info >}}
 
 1. Click **Registration** in the **Devices** menu of the navigator and then click **Register device**.
 2. In the resulting **Register devices** dialog box, select **General device registration**.
@@ -103,7 +103,10 @@ If you are subscribed to the required applications you will see a third option
 5. Click **Add another device** to register one more device. Again, enter the device ID and optionally select a group. This way, you can add multiple devices in one step.
 6. Click **Next** to register your device(s).
 
-> **Info:** In an {{< enterprise-tenant >}}, the {{< management-tenant >}} may also directly select a tenant to which the device will be added from here. Note that since the {{< management-tenant >}} does not have access to the subtenant's inventory you can either register devices to a tenant OR to a group, not both.
+{{< c8y-admon-info >}}
+In an {{< enterprise-tenant >}}, the {{< management-tenant >}} may also directly select a tenant to which the device will be added from here. Note that since the {{< management-tenant >}} does not have access to the subtenant's inventory you can either register devices to a tenant OR to a group, not both.
+{{< /c8y-admon-info >}}
+
 
 <img src="/images/users-guide/DeviceManagement/devmgmt-device-registration-tenant.png" alt="General device registration">
 
@@ -113,14 +116,22 @@ Turn on the device(s) and wait for the connection to be established.
 Once a device is connected, its status will change to "Pending acceptance".
 Click **Accept** to confirm the connection. The status of the device will change to "Accepted".
 
-> **Info:** In case of any issues, consult the documentation applicable for your device type in the [{{< product-c8y-iot >}} {{< device-portal >}}]({{< link-device-portal >}}) or look up the manual of your device.
+{{< c8y-admon-info >}}
+In case of any issues, consult the documentation applicable for your device type in the [{{< product-c8y-iot >}} {{< device-portal >}}]({{< link-device-portal >}}) or look up the manual of your device.
+{{< /c8y-admon-info >}}
 
 <a name="creds-upload"></a>
 #### To bulk-register devices
 
+{{< c8y-admon-req >}}
+* Stub
+{{< /c8y-admon-req >}}
+
 To connect larger amounts of devices, {{< product-c8y-iot >}} offers the option to bulk-register devices, that means, to register larger amounts of devices by uploading a CSV file.
 
-> **Info:** There is no restriction on the number of devices that you can bulk-register but the more devices you add the slower the creation and operation gets.
+{{< c8y-admon-info >}}
+There is no restriction on the number of devices that you can bulk-register but the more devices you add the slower the creation and operation gets.
+{{< /c8y-admon-info >}}
 
 1. Click **Registration** in the **Devices** menu of the navigator and then click **Register device**.
 2. In the resulting **Register devices** dialog box select **Bulk device registration**.
@@ -135,7 +146,9 @@ Depending on the format of the uploaded CSV file, one of the following registrat
 * Simple registration
 * Full registration
 
-> **Info:** Bulk registration creates an elementary representation of the device. Then, the device needs to update it to a full representation with its own status.
+{{< c8y-admon-info >}}
+Bulk registration creates an elementary representation of the device. Then, the device needs to update it to a full representation with its own status.
+{{< /c8y-admon-info >}}
 
 **Simple registration**
 
@@ -172,7 +185,9 @@ After the data is imported, you will get feedback on the number of devices that 
 
 For your convenience, we provide CSV template files for both bulk registration types (simple/full) which you can download from the registration wizard to view or copy the structure.
 
->**Info:** If the device with the given identifier already exists, it will be updated with the data from the CSV file.
+{{< c8y-admon-info >}}
+If the device with the given identifier already exists, it will be updated with the data from the CSV file.
+{{< /c8y-admon-info >}}>
 
 ##### To import CSV data in Microsoft Excel
 
@@ -185,10 +200,6 @@ For your convenience, we provide CSV template files for both bulk registration t
 For further information on the file format and accepted CSV variants, also refer to
 [Create a bulk device credentials request](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#operation/postBulkNewDeviceRequestCollectionResource) in the {{< openapi >}}.
 
->**Info:** In an {{< enterprise-tenant >}} you may also register devices across multiple tenants by adding a **Tenant** column to the spreadsheet and importing the CSV file from the {{< management-tenant >}}.
-
-{{< c8y-admon-related >}}
-* See [Device integration tutorials](../../device-tutorials/tutorials-introduction) for information on the integration of specific devices
-* See the [Device SDK guide](../../device-sdk/introduction/) for information on device integration via REST and C++
-* See the [device control API](https://cumulocity.com/api/{{< c8y-current-version >}}/#tag/Device-control-API) for REST API methods concerning device management
-{{< /c8y-admon-related >}}
+{{< c8y-admon-info >}}
+In an {{< enterprise-tenant >}} you may also register devices across multiple tenants by adding a **Tenant** column to the spreadsheet and importing the CSV file from the {{< management-tenant >}}.
+{{< /c8y-admon-info >}}>
