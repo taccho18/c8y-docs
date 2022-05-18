@@ -25,6 +25,16 @@ ROLES & PERMISSIONS:
 - For managing users via REST, see [Users](https://{{< domain-c8y >}}/api/{{< c8y-current-version >}}/#tag/Users) in the {{< openapi >}}.
 {{< /c8y-admon-related >}}
 
+{{< c8y-admon-howto >}}
+- To view users
+- To add a user
+- To edit a user
+- To copy inventory roles
+- To delegate/undelegate user hierarchies
+- To enable/disable users
+- To delete a user
+{{< /c8y-admon-howto >}}
+
 
 If your tenant is configured for using single sign-on (SSO) in {{< sag-cloud >}}, new users should be created under **My Cloud**, accessible through the application switcher in the upper right corner, so that they are able to use the single sign-on feature.
 
