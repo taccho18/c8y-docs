@@ -46,9 +46,10 @@ For users created via an external authorization server, updating the following s
 
 Moreover, password reset in {{< product-c8y-iot >}} is disabled for users created through an external authentication server.
 
-> **Info:** Users which are using single sign-on cannot change the password of users which are managed by the platform.
+{{< c8y-admon-info >}}
+Users which are using single sign-on cannot change the password of users which are managed by the platform.
+{{< /c8y-admon-info >}}
 
-<a name="view-users"></a>
 ### To view users
 
 To view all users in your tenant, click **Users** in the **Account** menu in the navigator.
@@ -72,8 +73,9 @@ Initially, the **User** page only shows the top-level users. To see all users in
 ### To add a user
 
 1. Click **Add user** at the right of the top menu bar.  
-
-  >**Info:** If single sign-on is enabled for your tenant, a message will show up which reminds you that you are about to create a local user which will not be able to login via single sign-on. Create new users in **My Cloud** instead, accessible through the application switcher in the upper right corner, to enable them using the single sign-on feature.
+  {{< c8y-admon-info >}}
+If single sign-on is enabled for your tenant, a message will show up which reminds you that you are about to create a local user which will not be able to login via single sign-on. Create new users in **My Cloud** instead, accessible through the application switcher in the upper right corner, to enable them using the single sign-on feature.
+  {{< /c8y-admon-info >}}
 
 2. At the left of the **New user** window, provide the following information to identify the user:
 
@@ -138,7 +140,9 @@ Initially, the **User** page only shows the top-level users. To see all users in
 
 The new user will be added to the user list.
 
-> **Info:** By default, manually created users always have the "Own&#95;User&#95;Management" permissions set to active.
+{{< c8y-admon-info >}}
+By default, manually created users always have the "Own&#95;User&#95;Management" permissions set to active.
+{{< /c8y-admon-info >}}
 
 ### To edit a user
 
@@ -146,7 +150,9 @@ The new user will be added to the user list.
 2. Click **Change password** to change the password.
 3. Click **Save** to apply your settings.
 
-> **Info:** You need a role with user management permission to perform this option.
+{{< c8y-admon-info >}}
+You need a role with user management permission to perform this option.
+{{< /c8y-admon-info >}}
 
 ### To copy inventory roles
 
@@ -157,7 +163,9 @@ The new user will be added to the user list.
 
 The inventory roles will be copied from the selected user.
 
-> **Info:** You need a role with user management permission to perform this option.
+{{< c8y-admon-info >}}
+You need a role with user management permission to perform this option.
+{{< /c8y-admon-info >}}
 
 ### To delegate/undelegate user hierarchies
 
@@ -167,16 +175,22 @@ Click **Undelegate** to remove a delegation.
 
 Refer to [Managing User Hierarchies](/users-guide/enterprise-tenant#user-hierarchies) for details on delegation.
 
-> **Info:** You need a role with user management permission to perform this option.
+{{< c8y-admon-info >}}
+You need a role with user management permission to perform this option.
+{{< /c8y-admon-info >}}
 
 ### To disable/enable a user
 
 Click the menu icon at the right of the respective row and then click **Disable** to disable an active user, or click **Enable** to enable a user that has been disabled.
 
-> **Info:** You need a role with user management permission to perform this option.
+{{< c8y-admon-info >}}
+You need a role with user management permission to perform this option.
+{{< /c8y-admon-info >}}
 
 ### To delete a user
 
 Click the menu icon at the right of the respective row and then click **Delete**.
 
-> **Info:** You need a role with user management permission to perform this option.
+{{< c8y-admon-info >}}
+You need a role with user management permission to perform this option.
+{{< /c8y-admon-info >}}
