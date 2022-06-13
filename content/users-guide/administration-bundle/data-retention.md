@@ -17,8 +17,8 @@ helpcontent:
 
 {{< c8y-admon-req >}}
 ROLES & PERMISSIONS:
-- To view retention rules: Permission level READ for permission type "Retention rules"
-- To manage retention rules (create, update, delete): Permission level ADMIN for permission type "Retention rules"
+- To view retention rules: READ permission for the permission type "Retention rules"
+- To manage retention rules (create, update, delete): ADMIN permission for the permission type "Retention rules"
 {{< /c8y-admon-req >}}
 
 {{< c8y-admon-related >}}
