@@ -1,0 +1,33 @@
+---
+title: Images
+weight: 80
+layout: bundle
+---
+
+=== Normal image
+
+Source:
+
+[source]
+----
+image:../tiger.png[Tiger]
+----
+
+Yield:
+
+image:../tiger.png[Tiger]
+
+=== Boxed image
+
+Source:
+
+[source]
+----
+image::../tiger.png[]
+----
+
+Yield:
+
+image::../tiger.png[]
+
+(not working)

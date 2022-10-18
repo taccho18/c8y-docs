@@ -1,0 +1,24 @@
+---
+title: Includes
+weight: 40
+layout: bundle
+---
+
+
+Source:
+
+[source]
+----
+  include::content/asciidoc/asciidoc-showcase-bundle/include-me.adoc[]
+----
+
+Source of `content/asciidoc/asciidoc-showcase-bundle/include-me.adoc`:
+
+[source]
+----
+Some included text. With `markup` even.
+----
+
+Yield:
+
+include::content/asciidoc/asciidoc-showcase-bundle/include-me.adoc[]

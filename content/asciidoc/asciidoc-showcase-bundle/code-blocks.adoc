@@ -1,0 +1,54 @@
+---
+title: Code blocks
+weight: 60
+layout: bundle
+---
+
+Source:
+
+[source]
+----
+  [source,json]
+  ----
+  {
+    "self": "https://<TENANT_DOMAIN>/devicecontrol/operation/123",
+    "id": "123",
+    "creationTime": "2019-09-06T12:03:27.927+02:0",
+    "deviceId": "1234",
+    "deviceExternalIDs": {},
+    "bulkOperationId": "1237",
+    "status": "FAILED",
+    "failureReason": "Could not handle the operation",
+    "com_cumulocity_model_WebCamDevice": {
+      "name": "Take a picture",
+      "parameters": {
+        "duration": "5s",
+        "quality": "HD"
+      }
+    }
+  }
+  ----
+----
+
+Yield:
+
+[source,json]
+----
+{
+  "self": "https://<TENANT_DOMAIN>/devicecontrol/operation/123",
+  "id": "123",
+  "creationTime": "2019-09-06T12:03:27.927+02:0",
+  "deviceId": "1234",
+  "deviceExternalIDs": {},
+  "bulkOperationId": "1237",
+  "status": "FAILED",
+  "failureReason": "Could not handle the operation",
+  "com_cumulocity_model_WebCamDevice": {
+    "name": "Take a picture",
+    "parameters": {
+      "duration": "5s",
+      "quality": "HD"
+    }
+  }
+}
+----

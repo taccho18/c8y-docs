@@ -1,0 +1,68 @@
+---
+title: Comments
+weight: 30
+layout: bundle
+---
+
+=== Comment lines
+
+Source:
+
+[source]
+----
+// A single-line comment.
+----
+
+Yield:
+
+// A single-line comment.
+
+(Nothing, duh :) )
+
+=== Comment blocks
+
+Source:
+
+[source]
+----
+////
+A comment block.
+
+Notice it's a delimited block.
+////
+----
+
+Yield:
+
+////
+A comment block.
+
+Notice it's a delimited block.
+////
+
+(Nothing, duh :) )
+
+=== Comment block alternative
+
+Source:
+
+[source]
+----
+  [comment]
+  --
+  A comment block.
+
+  Notice it's a delimited block.
+  --
+----
+
+Yield:
+
+[comment]
+--
+A comment block.
+
+Notice it's a delimited block.
+--
+
+(Nothing, duh :) )

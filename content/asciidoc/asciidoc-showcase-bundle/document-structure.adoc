@@ -1,5 +1,5 @@
 ---
-title: Asciidoc file with content
+title: Document structure
 weight: 10
 layout: bundle
 ---
