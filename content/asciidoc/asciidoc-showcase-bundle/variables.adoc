@@ -4,4 +4,40 @@ weight: 50
 layout: bundle
 ---
 
-Blurp.
+=== Notation 1
+
+Source:
+
+[source]
+----
+variables:
+  c8y-current-version: 10.13.0
+
+$variables-c8y-current-version
+----
+
+Yield:
+
+variables:
+  c8y-current-version: 10.13.0
+
+$variables-c8y-current-version
+
+(does not work)
+
+=== Notation 2
+
+[source]
+----
+:c8y-current-version: 10.13.0
+
+{c8y-current-version}
+----
+
+Yield:
+
+:c8y-current-version: 10.13.0
+
+{c8y-current-version}
+
+This could work with link:#includes.a[Includes].

@@ -4,14 +4,8 @@ weight: 10
 layout: bundle
 ---
 
-Asciidoctor Demo
-================
-////
-Big ol' comment
-
-sittin' right 'tween this here title 'n header metadata
-////
-Dan Allen <thedoc@asciidoctor.org>
+= Document structure
+Richard Sill <richard.sill@softwareag.com>
 :description: A demo of Asciidoctor. This document +
               exercises numerous features of AsciiDoc +
               to test Asciidoctor compliance.

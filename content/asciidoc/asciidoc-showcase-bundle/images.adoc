@@ -17,6 +17,29 @@ Yield:
 
 image:../tiger.png[Tiger]
 
+=== Image in `imagesdir`
+
+`imagesdir` source:
+
+[source]
+----
+=Images
+:imagesdir: images
+----
+
+Source:
+
+[source]
+----
+image:tiger.png[Tiger]
+----
+
+Yield:
+
+image:tiger.png[Tiger]
+
+(not working - also had to ommit the `imagesdir` statement since it breaks the other examples too.)
+
 === Boxed image
 
 Source:

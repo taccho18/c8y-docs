@@ -46,6 +46,17 @@ Yield:
 
 See <<language-independent-anchor-ID>>.
 
+=== Anchor for another file
+
+Source:
+
+[source]
+----
+link:#includes.a[Includes]
+----
+
+Yield:
+link:#includes.a[Includes]
 
 === Lorem ipsum to space a bit
 

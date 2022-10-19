@@ -4,4 +4,106 @@ weight: 70
 layout: bundle
 ---
 
-Blurp.
+=== Admonition paragraph syntax
+
+Source:
+
+[source]
+----
+NOTE: A note admonition.
+
+TIP: A tip admonition.
+
+IMPORTANT: An important admonition.
+
+CAUTION: A caution admonition.
+
+WARNING: A warning admonition.
+----
+
+Yield:
+
+NOTE: A note admonition.
+
+TIP: A tip admonition.
+
+IMPORTANT: An important admonition.
+
+CAUTION: A caution admonition.
+
+WARNING: A warning admonition.
+
+(partially working, CSS is off in some places.)
+
+=== Admonition block syntax
+
+Source:
+
+[source]
+----
+[NOTE]
+.Info
+====
+An info note admonition.
+====
+
+[TIP]
+.Hint
+====
+A hint tip admonition.
+====
+
+[IMPORTANT]
+.Very
+====
+A very important admonition.
+====
+
+[CAUTION]
+.Dangerous
+====
+A dangerous caution admonition.
+====
+
+
+[WARNING]
+.Repeated
+====
+A repeated warning admonition.
+====
+----
+
+Yield:
+
+[NOTE]
+.Info
+====
+An info note admonition.
+====
+
+[TIP]
+.Hint
+====
+A hint tip admonition.
+====
+
+[IMPORTANT]
+.Very
+====
+A very important admonition.
+====
+
+[CAUTION]
+.Dangerous
+====
+A dangerous caution admonition.
+====
+
+
+[WARNING]
+.Repeated
+====
+A repeated warning admonition.
+====
+
+(partially working, CSS is off in some places.)
