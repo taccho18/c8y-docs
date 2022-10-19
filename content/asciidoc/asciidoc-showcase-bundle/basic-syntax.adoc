@@ -4,4 +4,194 @@ weight: 20
 layout: bundle
 ---
 
-Blurp.
+=== Links
+
+Source:
+
+[source]
+----
+http://asciidoctor.org[Asciidoctor]
+----
+
+Yield:
+
+http://asciidoctor.org[Asciidoctor]
+
+==== Adjacent lists
+
+Source:
+
+[source]
+----
+* this list
+* should join
+
+* to have
+* four items
+----
+
+Yield:
+
+* this list
+* should join
+
+* to have
+* four items
+
+==== Numbered lists
+
+Source:
+
+[source]
+----
+. These items
+. will be auto-numbered
+.. and can be nested
+. A numbered list can nest
+* unordered
+* list
+* items
+----
+
+Yield:
+
+. These items
+. will be auto-numbered
+.. and can be nested
+. A numbered list can nest
+* unordered
+* list
+* items
+
+==== Nested lists
+
+Source:
+
+[source]
+----
+* first level
+written on two lines
+* first level
++
+....
+with this literal text
+....
++
+** second level
+*** third level
+- fourth level
+* back to +
+first level
+----
+
+Yield:
+
+* first level
+written on two lines
+* first level
++
+....
+with this literal text
+....
++
+** second level
+*** third level
+- fourth level
+* back to +
+first level
+
+=== Horizontal rule
+
+Source:
+
+[source]
+----
+'''
+----
+
+Yield:
+
+'''
+
+=== Quotes
+
+Source:
+
+[source]
+----
+____
+AsciiDoc is 'so' *powerful*!
+____
+
+This verse comes to mind.
+
+[verse]
+La la la
+
+Here's another quote:
+
+[quote, Sir Arthur Conan Doyle, The Adventures of Sherlock Holmes]
+____
+When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth.
+____
+
+----
+
+Yield:
+
+____
+AsciiDoc is 'so' *powerful*!
+____
+
+This verse comes to mind.
+
+[verse]
+La la la
+
+Here's another quote:
+
+[quote, Sir Arthur Conan Doyle, The Adventures of Sherlock Holmes]
+____
+When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth.
+____
+
+(the last one is not rendered nicely)
+
+=== Tables
+
+Source:
+
+[source]
+----
+.A table with a title
+[width=80%]
+|===
+|Column 1, header row | Column 2, header row | Column 3, header row | Column 4, header row
+
+3+| This cell spans columns 1, 2, and 3 because its specifier contains a span of `3+`
+| Cell in column 4, row 2
+
+| Cell in column 1, row 3
+| Cell in column 2, row 3
+| Cell in column 3, row 3
+| Cell in column 4, row 3
+|===
+----
+
+Yield:
+
+.A table with a title
+[width=80%]
+|===
+|Column 1, header row | Column 2, header row | Column 3, header row | Column 4, header row
+
+3+| This cell spans columns 1, 2, and 3 because its specifier contains a span of `3+`
+| Cell in column 4, row 2
+
+| Cell in column 1, row 3
+| Cell in column 2, row 3
+| Cell in column 3, row 3
+| Cell in column 4, row 3
+|===
+
+(not working attributes: cols, orientation, frame, grid)

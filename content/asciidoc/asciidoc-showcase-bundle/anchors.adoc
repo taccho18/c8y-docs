@@ -55,8 +55,17 @@ Source:
 link:#includes.a[Includes]
 ----
 
+=== Anchor for another file in Markdown
+
+Source:
+
+[source]
+----
+See link:/welcome/intro-documentation[Introduction] in *Welcome*.
+----
+
 Yield:
-link:#includes.a[Includes]
+See link:/welcome/intro-documentation[Introduction] in *Welcome*.
 
 === Lorem ipsum to space a bit
 
