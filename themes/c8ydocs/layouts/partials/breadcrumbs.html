@@ -1,0 +1,50 @@
+<nav style="--bs-breadcrumb-divider: '>'; margin-top: -20px;" class="breadcrumb-bar">
+<ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+    <li class="breadcrumb-item"><a href="{{ .Site.Params.home}}{{.Site.Params.guidesRedirect}}">{{.Site.Params.productName}}</a></li>
+    <li class="breadcrumb-item guide"><a class=""></a></li>
+    <li class="breadcrumb-item page"><a class=""></a></li>
+    <li class="breadcrumb-item currenth2" style="display: none;"><a class=""></a></li>
+    <li class="breadcrumb-item currenth3" style="display: none;"><a class=""></a></li>
+  </ol>
+<script>
+
+ $(window).on("scroll", function ()
+  {
+    var allh2 = document.querySelectorAll('#main-nav .list-group a');
+    $('#main-nav .list-group a').each(function (i) {
+    if ($(this).is('.active'))
+    {
+      let activeH2 = allh2[i].getAttribute('href');
+      let activeH2Text = allh2[i].innerHTML;
+      //console.log(activeH2);
+      $(".breadcrumb-item.currenth2 a").attr("href", activeH2);
+      $(".breadcrumb-item.currenth2 a").text(activeH2Text);
+      $(".breadcrumb-item.currenth2").show();
+      if ($(this).on('blur'))
+      {
+        $(".breadcrumb-item.currenth3").hide();
+      }
+    }
+  });
+ });
+
+ $(window).on("hashchange", function (e)
+  {
+    var allh2 = document.querySelectorAll('#main-nav .list-group a');
+    $('#main-nav .list-group a').each(function (i) {
+    if ($(this).is('.active'))
+    {
+      let activeH2 = allh2[i].getAttribute('href');
+      let activeH2Text = allh2[i].innerHTML;
+     // console.log(activeH2);
+      $(".breadcrumb-item.currenth2 a").attr("href", activeH2);
+      $(".breadcrumb-item.currenth2 a").text(activeH2Text);
+      $(".breadcrumb-item.currenth2").show();
+    }
+  });
+ });
+
+
+
+</script>
+</nav>
